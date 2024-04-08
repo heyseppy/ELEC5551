@@ -14,10 +14,10 @@ git clone <URL>
 
 ## Making Changes and Committing
 1. **Make changes:** Edit files in your local repository as needed.
-2. **Stage changes:** Use the `git add` command to stage your changes for commit:
+2. **Stage changes:** Use the `git add <file_path_1> <file_path_2> <file_path_n>` command to stage your changes for commit:
 
 
-3. **Commit changes:** Use the `git commit` command to commit your staged changes:
+3. **Commit changes:** Use the `git commit -m "<one line message detailing changes>"` command to commit your staged changes:
 
 ## Pushing Changes to GitHub
 1. **Push changes:** Use the `git push` command to push your committed changes to GitHub:
