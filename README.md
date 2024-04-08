@@ -5,7 +5,11 @@ Electrical and Electronic Engineering Design Project 1
 
 1. **Find the repository:** Navigate to the repository you want to clone on GitHub.
 2. **Copy the URL:** Click the "Code" button and copy the URL under "Clone with HTTPS."
-3. **Clone the repository:** Open a terminal or command prompt and run the following command, replacing `URL` with the copied URL:
+3. **Clone the repository:** Open a terminal or command prompt and run the following command, replacing `URL` with the copied URL: 
+
+```bash
+git clone <URL>
+```
 
 
 ## Making Changes and Committing
