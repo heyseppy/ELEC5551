@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Model Viewer</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@1.10.0/dist/model-viewer.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+    <style>
+        body{
+            background-color: lightslategray;
+        }
+        model-viewer {
+            width: 40%; 
+            height: 100vh; 
+        }
+        .code_window {
+            overflow: auto;
+            height:100vh;
+            width: 50vw;
+        }
+    </style>
+    <div class="d-flex justify-content-center">
+       
+            <model-viewer src="cubesat.glb" alt="A 3D model" ar ar-modes="webxr scene-viewer quick-look" environment-image="neutral" auto-rotate> </model-viewer>
+        
+        <div class="code_window">
+            <center class="mt-5">
+                <h1>cubeSat mcu system 1.0</h1>
+                <h5>@sepkimiaei (https://github.com/heyseppy)</h5>
+               
+            </center>
+            
+                <br><br>
+                <h4> 
+                    class structure
+                </h4>
+                <pre>
+                    <code class="language-python">
+'''
+- object orientated approach to develop a cubeSat class with the following functions
+- initiliasation: sets the log file output, transmission frequency and encryption key
+- read_input: 
+    @sensor_type:
+        "weather" (5 temperature sensors, 1 humidity sensor)
+        "imu" (altitude, speed, yaw, bearing)
+        "gps" (gps_lat, gps_long, gps_time)
+        "diagnostics" (battery)
+- store_data():
+    save temporary data array to disk (depending on what file path was given)
+- scale_inputs
+    scale all inputs as per their relevant scaling factor.
+- capture_img
+    capture frame and store image blob/buffer to temporary data.
+- perform_parity_check
+    perform checksum
+- encrypt_data
+    use symmetric encryption to store to the image.
+- poll_gps
+    store gps_lat, long and time to temporary data.
+- transmit_location
+    send location beacon message.
+- transmit_data
+    send all encrypted data.
+'''
+    </code>
+</pre>
+
+    <br>
+    <h4> 
+        uPython imports
+    </h4>
+    <pre>
+        <code class="language-python">
+from cryptography.fernet import Fernet
+from machine import Pin, ADC
+import datetime
+import json
+import hashlib
+import time
+</code>
+</pre>       
+
+    <br>
+    <h4> 
+        cubeSat.init(<i class="text-danger">log_file, transmission_freq, public_key</i>)
+    </h4>
+    <pre>
+        <code class="language-python">
+        def __init__(self, log_file, transmission_freq, public_key):
+            # set up our cubesat log file with append privileges
+            self.log_file = open(log_file, "a")
+    
+            # set up transmission frequency (need to check with aidan later)
+            self.transmission_freq = None
+    
+            # set up data dictionary
+            self.temporary_data = {}
+            self.encrypted_data = b''
+    
+            self.temp1        = ADC(PIN())
+            self.temp2        = ADC(PIN())
+            self.temp3        = ADC(PIN())
+            self.temp4        = ADC(PIN())
+            self.temp5        = ADC(PIN())
+            self.pressure_1   = ACD(PIN())
+            self.pressure_2   = ACD(PIN())
+            self.humidity     = ACD(PIN())
+    
+            self.altitude     = ADC(PIN())
+            self.yaw          = ADC(PIN())
+            self.bearing      = ADC(PIN())
+    
+            self.acceleration = ADC(PIN())
+            self.speed        = ADC(PIN())
+            
+            self.battery      = ADC(PIN())
+    
+            self.gps_lat      = ADC(PIN())
+            self.gps_long     = ADC(PIN())
+            self.gps_time     = ADC(PIN())
+</code>
+</pre>
+
+
+    <br>
+    <h4> 
+        cubeSat.read_inputs(<i class="text-danger">sensor_type</i>)
+    </h4>
+    <pre>
+        <code class="language-python">
+        def read_inputs(self,sensor_type):
+
+            if (sensor_type == "weather"):
+                # temperature first
+                self.temporary_data["temp1"]          = self.s_temp_1.read()
+                self.temporary_data["temp2"]          = self.s_temp_2.read()
+                self.temporary_data["temp3"]          = self.s_temp_3.read()
+                self.temporary_data["temp4"]          = self.s_temp_4.read()
+                self.temporary_data["temp5"]          = self.s_temp_5.read()
+    
+                # humidity
+                self.temporary_data["humidity"]       = self.humidity.read()
+    
+                # pressure
+                self.temporary_data["pressure_1"]     = self.pressure_1.read()
+                self.temporary_data["pressure_2"]     = self.pressure_2.read()
+    
+            elif (sensor_type == "imu"):
+                self.temporary_data["speed"]          = self.speed.read()
+                self.temporary_data["acceleration"]   = self.acceleration.read()
+                self.temporary_data["altitude"]       = self.altitude.read()
+                self.temporary_data["bearing"]        = self.bearing.read()
+    
+            elif (sensor_type == "gps"):
+                self.temporary_data["gps_lat"]        = self.gps_lat.read()
+                self.temporary_data["gps_long"]       = self.gps_long.read()
+                self.temporary_data["gps_time"]       = self.gps_time.read()
+    
+            elif (sensor_type == "diagnostics"):
+                self.temporary_data["battery"]        = self.battery.read()
+    
+            else:
+                print("please enter valid sensor type")
+</code>
+</pre>
+
+<br>
+    <h4> 
+        cubeSat.store_data()
+    </h4>
+    <pre>
+        <code class="language-python">
+        def store_data(self):
+            '''
+                store data to disk. 
+                seems to be supported by stmCube development environment.
+                TO-DO: discuss whether log file needs to be encrypted or not.
+            '''
+            temporary_log_file_str = json.dumps(self.temporary_data, sort_keys=True)
+    
+            # format would be string iso time + dictionary array
+            self.log_file.write(f"{str(datetime.time.now())} - {temporary_log_file_str}")
+</code>
+</pre>
+
+<br>
+    <h4> 
+        cubeSat.scale_inputs()
+    </h4>
+    <pre>
+        <code class="language-python">
+        def scale_inputs(self):
+
+            # iterate through all cubeSat sensor datas and scale accordingly.
+            for item, values in self.temporary_data.items():
+                self.temporary_data[item]["scaled"] = values["raw"] * values["scaling_factor"]
+</code>
+</pre>
+
+<br>
+    <h4> 
+        cubeSat.perform_parity_check()
+    </h4>
+    <pre>
+        <code class="language-python">
+        def perform_parity_check(self):
+            sensor_to_string = json.dumps(self.temporary_data, sort_keys=True)
+            hash_object = hashlib.sha256()
+            hash_object.update(sensor_to_string.encode())
+            self.temporary_data["checksum"] = hash_object.hexdigest()
+</code>
+</pre>
+
+<br>
+    <h4> 
+        cubeSat.scale_inputs()
+    </h4>
+    <pre>
+        <code class="language-python">
+        def encrypt_data(self):
+            # convert to bytes
+            byte_repr = str.encode(str(self.temporary_data))
+            self.encrypted_data = f.encrypt(byte_repr)
+</code>
+</pre>
+           
+        </div>
+        
+    </div>
+    
+</body>
+</html>
