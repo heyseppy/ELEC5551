@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+   <body>
+  <center><h1>ELEC551 cubeSat <br></h1> <h2>Sep Kimiaei</h2><center>
+    <br>
+  </body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizable State Machine</title>
+  
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+         
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: grey;
+        }
+
+        .state-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .state {
+            padding: 10px 20px;
+            border: 2px solid #0052cc;
+            border-radius: 20px;
+            background-color: #ffffff;
+            color: #0052cc;
+            cursor: pointer;
+            position: relative;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .state.active {
+            background-color: #0052cc;
+            color: #ffffff;
+        }
+       .state.red {
+            background-color: red;
+            color: #ffffff;
+        }
+
+        .state:before, .state:after {
+            content: '';
+            position: absolute;
+            width: 0; 
+            height: 0; 
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+        }
+
+        .state:before {
+            left: 100%;
+            border-left: 10px solid #0052cc;
+        }
+
+        .state:after {
+            left: calc(100% - 2px);
+            border-left: 10px solid #ffffff;
+            z-index: 1;
+        }
+
+        .state:last-child:before, .state:last-child:after {
+            display: none;
+        }
+
+        .state.active:before {
+            border-left-color: #ffffff;
+        }
+    </style>
+  
+</head>
+  
+<body style="display: flex">
+  <div >
+    <div class="state-container" id="stateContainer">
+        <!-- States will be added here dynamically -->
+    </div>
+  </div>
+<body>
+  
+      
+    
+    
+  </body>
+    <script>
+        const stateMachine = {
+            states: ['Energise', 'Read Sensors (5x)', 'Scale Sensors (5x)', 'Create Data Packet', 'Store Data Packet to Disk', 'Encrypt Data Packet', 
+                     'Check Timer', 'Capture Images','Calculate Telemetry', 'Transmit Telemetry', 'Transmit Triangulation Signal',
+                    ],
+            transitions: {
+              'Energise': 'Read Sensors (5x)',
+              'Read Sensors (5x)': 'Scale Sensors (5x)',
+              'Scale Sensors (5x)': 'Create Data Packet',
+              'Create Data Packet': 'Store Data Packet to Disk',
+              'Store Data Packet to Disk': 'Encrypt Data Packet',
+              'Encrypt Data Packet': 'Check Timer',
+              'Transmit Telemetry': 'Transmit Triangulation Signal',
+              'Transmit Triangulation Signal': 'Energise' // Assuming no transition from the last state
+
+              
+            },
+            currentState: null,
+            renderStates: function () {
+                const container = document.getElementById('stateContainer');
+                container.innerHTML = ''; // Clear the container
+                this.states.forEach(state => {
+                    const stateElement = document.createElement('div');
+                    stateElement.textContent = state;
+                    stateElement.classList.add('state');
+                    stateElement.dataset.state = state;
+                    container.appendChild(stateElement);
+                });
+            },
+            activateState: function (state) {
+                const stateElements = document.querySelectorAll('.state');
+                stateElements.forEach(element => {
+                    if (element.dataset.state === state && element.dataset.state == "Check Timer" ) 
+                    {
+                        element.classList.add('red');
+                        state = "Energise";
+                    }
+                    else if (element.dataset.state === state)
+                     {
+                        element.classList.add('active');
+                      
+                    } else {
+                        element.classList.remove('active');
+                    }
+                });
+                this.currentState = state;
+            },
+            nextState: function () {
+                const nextState = this.transitions[this.currentState];
+                if (nextState) {
+                    this.activateState(nextState);
+                }
+            },
+            init: function () {
+                this.renderStates();
+                this.activateState(this.states[0]);
+                setInterval(() => this.nextState(), 1000); // Change state every 2 seconds
+            }
+        };
+
+        stateMachine.init();
+    </script>
+
+  
+</body>
+    
+</html>
