@@ -1,0 +1,155 @@
+{
+    "temp1": {
+        "raw": 0.0,
+        "scaled": 0.0,
+        "type": "i2c",
+        "scale_min": 0.0,
+        "scale_max": 0.0,
+        "address": "0x01"
+    },
+    "temp2": {
+        "raw": 0.0,
+        "scaled": 0.0,
+        "scaling_factor": 0.0,
+        "type": "i2c",
+        "scale_min": 0.0,
+        "scale_max": 0.0,
+        "address": "0x01"
+    },
+    "temp3": {
+        "raw": 0.0,
+        "scaled": 0.0,
+        "scaling_factor": 0.0,
+        "type": "i2c",
+        "scale_min": 0.0,
+        "scale_max": 0.0,
+        "address": "0x01"
+    },
+    "temp4": {
+        "raw": 0.0,
+        "scaled": 0.0,
+        "scaling_factor": 0.0,
+        "type": "i2c",
+        "scale_min": 0.0,
+        "scale_max": 0.0,
+        "address": "0x01"
+    },
+    "temp5": {
+        "raw": 0.0,
+        "scaled": 0.0,
+        "scaling_factor": 0.0,
+        "type": "i2c",
+        "scale_min": 0.0,
+        "scale_max": 0.0,
+        "address": "0x01"
+    },
+    "speed": {
+        "raw": 0.0,
+        "scaled": 0.0,
+        "scaling_factor": 0.0,
+        "type": "i2c",
+        "scale_min": 0.0,
+        "scale_max": 0.0,
+        "address": "0x01"
+    },
+    "altitude": {
+        "raw": 0.0,
+        "scaled": 0.0,
+        "scaling_factor": 0.0,
+        "type": "i2c",
+        "scale_min": 0.0,
+        "scale_max": 0.0,
+        "address": "0x01"
+    },
+    "yaw": {
+        "raw": 0.0,
+        "scaled": 0.0,
+        "scaling_factor": 0.0,
+        "type": "i2c",
+        "scale_min": 0.0,
+        "scale_max": 0.0,
+        "address": "0x01"
+    },
+    "bearing": {
+        "raw": 0.0,
+        "scaled": 0.0,
+        "scaling_factor": 0.0,
+        "type": "i2c",
+        "scale_min": 0.0,
+        "scale_max": 0.0,
+        "address": "0x01"
+    },
+    "humidity": {
+        "raw": 0.0,
+        "scaled": 0.0,
+        "scaling_factor": 0.0,
+        "type": "i2c",
+        "scale_min": 0.0,
+        "scale_max": 0.0,
+        "address": "0x01"
+    },
+    "acceleration": {
+        "raw": 0.0,
+        "scaled": 0.0,
+        "scaling_factor": 0.0,
+        "type": "i2c",
+        "scale_min": 0.0,
+        "scale_max": 0.0,
+        "address": "0x01"
+    },
+    "gps_lat": {
+        "raw": 0.0,
+        "scaled": 0.0,
+        "scaling_factor": 0.0,
+        "type": "rs232",
+        "scale_min": 0.0,
+        "scale_max": 0.0,
+        "address": "14"
+    },
+    "gps_long": {
+        "raw": 0.0,
+        "scaled": 0.0,
+        "scaling_factor": 0.0,
+        "type": "rs232",
+        "scale_min": 0.0,
+        "scale_max": 0.0,
+        "address": "14"
+    },
+    "gps_time": {
+        "raw": 0.0,
+        "scaled": 0.0,
+        "scaling_factor": 0.0,
+        "type": "rs232",
+        "scale_min": 0.0,
+        "scale_max": 0.0,
+        "address": "14"
+    },
+    "battery": {
+        "raw": 0.0,
+        "scaled": 0.0,
+        "scaling_factor": 0.0,
+        "type": "rs232",
+        "scale_min": 0.0,
+        "scale_max": 0.0,
+        "address": "14"
+    },
+    "pressure_1": {
+        "raw": 0.0,
+        "scaled": 0.0,
+        "scaling_factor": 0.0,
+        "type": "rs232",
+        "scale_min": 0.0,
+        "scale_max": 0.0,
+        "address": "14"
+    },
+    "pressure_2": {
+        "raw": 0.0,
+        "scaled": 0.0,
+        "scaling_factor": 0.0,
+        "type": "rs232",
+        "scale_min": 0.0,
+        "scale_max": 0.0,
+        "address": "14"
+    },
+    "checksum": ""
+}
