@@ -1,1 +1,7 @@
-Record=TopLevelDocument|FileName=Telemetry_System.SchDoc|SheetNumber=1
+Record=TopLevelDocument|FileName=BMC.SchDoc|SheetNumber= 
+Record=NoMainPathDocument|SourceDocument=BMC.SchDoc|FileName=GPS.SchDoc|SheetNumber= 
+Record=NoMainPathDocument|SourceDocument=BMC.SchDoc|FileName=IMU.SchDoc|SheetNumber= 
+Record=NoMainPathDocument|SourceDocument=BMC.SchDoc|FileName=MCU.SchDoc|SheetNumber= 
+Record=NoMainPathDocument|SourceDocument=BMC.SchDoc|FileName=Pressure_and_Humidity.SchDoc|SheetNumber= 
+Record=NoMainPathDocument|SourceDocument=BMC.SchDoc|FileName=SD_Card.SchDoc|SheetNumber= 
+Record=NoMainPathDocument|SourceDocument=BMC.SchDoc|FileName=Telemetry_System.SchDoc|SheetNumber=1
