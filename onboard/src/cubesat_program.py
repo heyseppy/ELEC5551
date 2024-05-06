@@ -210,7 +210,6 @@ class cubeSat():
 
 
 
-
     def transmit_data(self):
         # transmission pulse to xBee transceiver.
         # pseudocode provied externally for xbee communication
