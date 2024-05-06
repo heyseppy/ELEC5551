@@ -8,7 +8,7 @@ import hashlib
 import time
 from art import *
 from sys import getsizeof
-
+from machine import I2C, Pin, serial
 
 '''
     @author Sep Kimiaei 2024 - ELEC5551 cubeSat design.
@@ -42,66 +42,34 @@ from sys import getsizeof
 
 simulation = True
 
-
-# version 0
-class cubeSat():
-    def __init__(self, log_file, public_key, simulation = True):
-
-        
-        self.log_file = open(log_file, "a")
-        self.f = Fernet(str.encode(str(public_key)))
-
-        if simulation == False:
-            i2c = I2C(0, sda = sda, scl = scl, freq = 4000000)
-            self.temperature_1 =  i2c.readfrom(0x01, )
-
-
-# version 1
+# version 1.0.1
 class cubeSat():
 
     def __init__(self, log_file, transmission_freq, public_key):
-
-        # set cubesat energisation time
-        self.start_time = time.time()
-
-        # configure cubesat log file
-        self.log_file = open(log_file, "a")
-
-        # set up symmetrical encryption key
-        # checked with @aidan to ensure that encryption will work.
-        self.f = Fernet(str.encode(str(public_key)))
         
-        # set up transmission frequency (need to check with aidan later)
-        self.transmission_freq = None
-
-        # set up data dictionary
+        # load configuration file for the cubesat
         sensor_file = open('sensors/sensors.json')
         self.temporary_data = json.load(sensor_file)
 
+        # set output disk file for cubesat onboard memory
+        self.log_file = open(log_file, "a")
+
+        # set cubesat energisation time (time of flight)
+        self.start_time = time.time()
+
+        # configure encryption protocol (Fernet symmetric key)
+        self.f = Fernet(str.encode(str(public_key)))
         self.encrypted_data = b''
+        
+        # set up transmission frequency ticks
+        self.transmission_freq = None
 
-        if not simulation:
-            self.temp1        = ADC(PIN())
-            self.temp2        = ADC(PIN())
-            self.temp3        = ADC(PIN())
-            self.temp4        = ADC(PIN())
-            self.temp5        = ADC(PIN())
-            self.pressure_1   = ACD(PIN())
-            self.pressure_2   = ACD(PIN())
-            self.humidity     = ACD(PIN())
+        # set up i2c bus. serial lines will be configured as each sensor is called.
+        self.cubesat_i2c = I2C(0, sda = sda, scl = scl, freq = 4000000)
 
-            self.altitude     = ADC(PIN())
-            self.yaw          = ADC(PIN())
-            self.bearing      = ADC(PIN())
+        self.print_debug()
 
-            self.acceleration = ADC(PIN())
-            self.speed        = ADC(PIN())
-            
-            self.battery      = ADC(PIN())
-
-            self.gps_lat      = ADC(PIN())
-            self.gps_long     = ADC(PIN())
-            self.gps_time     = ADC(PIN())
+    def print_debug(self):
 
         print()
         loading_screen =text2art("cubeSat  mcu") # return art as str in normal mode
@@ -109,8 +77,8 @@ class cubeSat():
         print("*"*130)
 
         print("[-] monitoring: enabled")
-        print("[-] transmitting once every:", transmission_freq, "seconds")
-        print("[-] logging data to:", log_file)
+        print("[-] transmitting once every:", self.transmission_freq, "seconds")
+        print("[-] logging data to:", self.log_file)
         print("[-] loaded in", len(self.temporary_data), "sensor inputs")
         print("[-] current memory usage:", getsizeof(self.temporary_data))
         print("\nconnections: ")
@@ -121,7 +89,22 @@ class cubeSat():
         print()
 
 
+    def read_input_sensor(self, data_key):
+        '''
+            returns the value at the stored address after addressing whether or not it is serial 
+            or i2c.
+        '''
+
+        if self.temporary_data[data_key]["type"] == "i2c":
+            _out = self.cubesat_i2c.readfrom(self.temporary_data[data_key]["address"], 1)
+        elif self.temporary_data[data_key]["type"] == "serial":
+            self.cubesat_serial = Serial(self.temporary_data["address"])
+            _out = self.cubesat_serial_port.read(self.temporary_data[data_key]["address"])
+
+        # return the output data (analog)
+        return _out
     
+
     def read_inputs(self,sensor_type):
 
         print("reading sensor:", sensor_type)
@@ -129,35 +112,38 @@ class cubeSat():
         
         if not simulation:
             if (sensor_type == "weather"):
-                # temperature first
-                self.temporary_data["temp1"]          = self.s_temp_1.read()
-                self.temporary_data["temp2"]          = self.s_temp_2.read()
-                self.temporary_data["temp3"]          = self.s_temp_3.read()
-                self.temporary_data["temp4"]          = self.s_temp_4.read()
-                self.temporary_data["temp5"]          = self.s_temp_5.read()
+                
+                
+                self.temporary_data["temp1"]          = self.read_input_sensor("temp1")
+                self.temporary_data["temp2"]          = self.read_input_sensor("temp2")
+                self.temporary_data["temp3"]          = self.read_input_sensor("temp3")
+                self.temporary_data["temp4"]          = self.read_input_sensor("temp4")
+                self.temporary_data["temp5"]          = self.read_input_sensor("temp5")
 
                 # humidity
-                self.temporary_data["humidity"]       = self.humidity.read()
+                self.temporary_data["humidity"]       = self.read_input_sensor("humidity")
 
                 # pressure
-                self.temporary_data["pressure_1"]     = self.pressure_1.read()
-                self.temporary_data["pressure_2"]     = self.pressure_2.read()
+                self.temporary_data["pressure_1"]     = self.read_input_sensor("pressure_1")
+                self.temporary_data["pressure_2"]     = self.read_input_sensor("pressure_2")
 
             elif (sensor_type == "imu"):
-                self.temporary_data["speed"]          = self.speed.read()
-                self.temporary_data["acceleration"]   = self.acceleration.read()
-                self.temporary_data["altitude"]       = self.altitude.read()
-                self.temporary_data["bearing"]        = self.bearing.read()
+                self.temporary_data["speed"]          = self.read_input_sensor("speed")
+                self.temporary_data["acceleration"]   = self.read_input_sensor("acceleration")
+                self.temporary_data["altitude"]       = self.read_input_sensor("altitude")
+                self.temporary_data["bearing"]        = self.read_input_sensor("bearing")
 
             elif (sensor_type == "gps"):
-                self.temporary_data["gps_lat"]        = self.gps_lat.read()
-                self.temporary_data["gps_long"]       = self.gps_long.read()
-                self.temporary_data["gps_time"]       = self.gps_time.read()
+                self.temporary_data["gps_lat"]        = self.read_input_sensor("gps_lat")
+                self.temporary_data["gps_long"]       = self.read_input_sensor("gps_long")
+                self.temporary_data["gps_time"]       = self.read_input_sensor("gps_time")
 
             elif (sensor_type == "diagnostics"):
-                self.temporary_data["battery"]        = self.battery.read()
+                self.temporary_data["battery"]        = self.read_input_sensor("battery")
 
+            # otherwise return None
             else:
+                print("no sensor was selected")
                 return
 
     def wait(self, period):
@@ -165,9 +151,8 @@ class cubeSat():
     
     def store_data(self):
         '''
-            store data to disk. 
-            seems to be supported by stmCube development environment.
-            TO-DO: discuss whether log file needs to be encrypted or not.
+            stores data to disk.
+            after discussion with client, the on-metal data will not need to be encrypted.
         '''
         print("stored to file:", self.log_file)
         temporary_log_file_str = json.dumps(self.temporary_data, sort_keys=True)
@@ -178,8 +163,10 @@ class cubeSat():
         print()
 
     def scale_inputs(self):
-        
-        # iterate through all cubeSat sensor datas and scale accordingly.
+        '''
+            iterates through all sensors and scales their values accordingly.
+            uses linear scaling methodology to perform this scaling.
+        '''
         for item, values in self.temporary_data.items():
             if item != "checksum":
                 print("scaled: ", item)
@@ -188,9 +175,10 @@ class cubeSat():
 
 
     def capture_img(self):
-        # interface to camera
-        print("snap! image taken")
-        print()
+        # transmission and receival to/from camera
+        # upon request send camera pulse via the txline
+        # e.g. transmitSesnorpulse()
+        # e.g. recordCameradata to temporary data buffer.
         pass
     
     def perform_parity_check(self):
@@ -211,27 +199,21 @@ class cubeSat():
         print(self.encrypted_data)
         print()
 
+    def split_packets(self, packet_size):
+        # split data into chunks that will fit accordingly.
+        packets = []
+
+        for i in range(len(self.temporary_data) / packet_size):
+            packets.append(self.temporary_data[i*packet_size: i*packet_size + packet_size])
+        
+        return packets
 
 
-    def poll_gps(self):
-        print("gps polled")
-        print()
 
-        pass
-
-    def transmit_location(self):
-        # transmit location data
-        print("location transmitted")
-        print()
-
-        pass
 
     def transmit_data(self):
-        # transmit encrypted data
-        print(time.time() - self.start_time)
-        print("data transmitted")
-        print()
-
+        # transmission pulse to xBee transceiver.
+        # pseudocode provied externally for xbee communication
         pass
 
     
