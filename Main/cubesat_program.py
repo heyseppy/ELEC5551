@@ -9,6 +9,7 @@ import time
 from art import *
 from sys import getsizeof
 
+
 '''
     @author Sep Kimiaei 2024 - ELEC5551 cubeSat design.
 
@@ -41,14 +42,33 @@ from sys import getsizeof
 
 simulation = True
 
+
+# version 0
+class cubeSat():
+    def __init__(self, log_file, public_key, simulation = True):
+
+        
+        self.log_file = open(log_file, "a")
+        self.f = Fernet(str.encode(str(public_key)))
+
+        if simulation == False:
+            i2c = I2C(0, sda = sda, scl = scl, freq = 4000000)
+            self.temperature_1 =  i2c.readfrom(0x01, )
+
+
+# version 1
 class cubeSat():
 
     def __init__(self, log_file, transmission_freq, public_key):
 
-        # set up our cubesat log file with append privileges
+        # set cubesat energisation time
+        self.start_time = time.time()
+
+        # configure cubesat log file
         self.log_file = open(log_file, "a")
 
-        # set up symmetrical encryption key- check with aidan to see if it can fit in lora packet.
+        # set up symmetrical encryption key
+        # checked with @aidan to ensure that encryption will work.
         self.f = Fernet(str.encode(str(public_key)))
         
         # set up transmission frequency (need to check with aidan later)
@@ -84,16 +104,19 @@ class cubeSat():
             self.gps_time     = ADC(PIN())
 
         print()
-        loading_screen =text2art("elec5551  cubeSat  mcu") # return art as str in normal mode
+        loading_screen =text2art("cubeSat  mcu") # return art as str in normal mode
         print(loading_screen)
         print("*"*130)
 
         print("[-] monitoring: enabled")
-        print("[-] transmitting once every:", transmission_freq, "minutes")
+        print("[-] transmitting once every:", transmission_freq, "seconds")
         print("[-] logging data to:", log_file)
         print("[-] loaded in", len(self.temporary_data), "sensor inputs")
         print("[-] current memory usage:", getsizeof(self.temporary_data))
-        print(self.temporary_data.keys())
+        print("\nconnections: ")
+        print("temp1,temp2,temp3,temp4,temp5,speed,altitude,yaw,bearing,humidity,acceleration")
+        print("gps_lat,gps_long,gps_time,battery,pressure_1,pressure_2")
+        print("camera, xbee")
         print("*"*130)
         print()
 
@@ -205,6 +228,7 @@ class cubeSat():
 
     def transmit_data(self):
         # transmit encrypted data
+        print(time.time() - self.start_time)
         print("data transmitted")
         print()
 
