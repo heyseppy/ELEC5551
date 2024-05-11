@@ -1,0 +1,23 @@
+Removed Pin From Net: NetName=GND Pin=U?-10
+Removed Pin From Net: NetName=GND Pin=U?-12
+Removed Pin From Net: NetName=GND Pin=U?-13
+Removed Pin From Net: NetName=GND Pin=U?-24
+Added Component: Designator=U?(SIP0008A)
+Add component (AddParameter): Name = "Mfr_Name"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TYPE"; Value = "TYPE"; VariantName = "[No Variations]"
+Add Component: Footprint Not Found NEO-M9
+Add Component: Footprint Not Found X3-SMD-3.6X1.3X0.8MM
+Add Pin To Net: Unknown Pin: Pin U?-10
+Add Pin To Net: Unknown Pin: Pin U?-12
+Add Pin To Net: Unknown Pin: Pin U?-13
+Add Pin To Net: Unknown Pin: Pin U?-24
+Add Pin To Net: Unknown Pin: Pin Y-2
+Added Pin To Net: NetName=NetU?_5 Pin=U?-5
+Added Net: Name=NetU?_5
+Added Pin To Net: NetName=NetU?_6 Pin=U?-6
+Added Net: Name=NetU?_6
+Added Member To Class: ClassName=MCU Member=Component U? STM32F411CEU6
+Add Class Member: Failed to add class member : Component Y 8MHz 33pF
+Added Room: Name=GPS
+Added Room: Name=MCU
