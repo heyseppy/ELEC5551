@@ -69,23 +69,6 @@ GenerateClassCluster=0
 DocumentUniqueId=YXSNWCXA
 
 [Document2]
-DocumentPath=Components\symbols\U_CSTCE8M00G15L99-R0.SchLib
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=0
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=JVHTISAB
-
-[Document3]
 DocumentPath=Components\symbols\U_TPS82698SIPR.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -102,7 +85,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=GVPHGYVO
 
-[Document4]
+[Document3]
 DocumentPath=Components\symbols\U_NEO-M9N-00B.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -119,14 +102,14 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=WKXRNGSZ
 
-[Document5]
+[Document4]
 DocumentPath=MCU.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
 AnnotateScope=All
-AnnotateOrder=-1
+AnnotateOrder=0
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
@@ -136,14 +119,14 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=PHPSQUEO
 
-[Document6]
+[Document5]
 DocumentPath=Telemetry_System.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
 AnnotateScope=All
-AnnotateOrder=-1
+AnnotateOrder=1
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
@@ -153,14 +136,14 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=SGIHABBE
 
-[Document7]
+[Document6]
 DocumentPath=BMC.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
 AnnotateScope=All
-AnnotateOrder=-1
+AnnotateOrder=2
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
@@ -170,14 +153,14 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=DRKHASDJ
 
-[Document8]
+[Document7]
 DocumentPath=GPS.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
 AnnotateScope=All
-AnnotateOrder=-1
+AnnotateOrder=3
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
@@ -187,14 +170,14 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=PSOJGMJI
 
-[Document9]
+[Document8]
 DocumentPath=Pressure_and_Humidity.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
 AnnotateScope=All
-AnnotateOrder=-1
+AnnotateOrder=4
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
@@ -204,14 +187,14 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=TGJTATXY
 
-[Document10]
+[Document9]
 DocumentPath=SD_Card.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
 AnnotateScope=All
-AnnotateOrder=-1
+AnnotateOrder=5
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
@@ -221,7 +204,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=CXWDJJGL
 
-[Document11]
+[Document10]
 DocumentPath=Components\footprints\NEO-M9N-00B.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -238,7 +221,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=MSEVSQSV
 
-[Document12]
+[Document11]
 DocumentPath=Components\footprints\STM32F411CEU6.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -255,24 +238,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=RBICBQBA
 
-[Document13]
-DocumentPath=Components\footprints\CSTCE8M00G15L99-R0.PcbLib
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=0
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=WBOGNVHX
-
-[Document14]
+[Document12]
 DocumentPath=Components\footprints\TPS82698SIPR.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -289,7 +255,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=YNUWEIBT
 
-[Document15]
+[Document13]
 DocumentPath=..\..\..\..\..\Public\Documents\Altium\AD24\Library\ExportIntLib\Components - 24.04.24 - 00.32\Components - 24.04.24 - 00.32.IntLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -306,7 +272,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document16]
+[Document14]
 DocumentPath=Telemetry_System.BomDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -323,7 +289,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document17]
+[Document15]
 DocumentPath=Telemetry_System.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1250,10 +1216,22 @@ NetClassManualEnabled=1
 NetClassSeparateForBusSections=0
 
 [LibraryUpdateOptions]
-SelectedOnly=0
+SelectedOnly=1
 UpdateVariants=1
 UpdateToLatestRevision=1
 PartTypes=0
+ComponentLibIdentifierKind0=Library Name And Type
+ComponentLibraryIdentifier0=Celestial Altium Library - altium_library.DbLib/Capacitors - Ceramic - 0603
+ComponentDesignItemID0=C0603C160K3GAC7867
+ComponentSymbolReference0=Capacitor
+ComponentUpdate0=1
+ComponentIsDeviceSheet0=0
+ComponentLibIdentifierKind1=Library Name And Type
+ComponentLibraryIdentifier1=U_NEO-M9N-00B.SchLib
+ComponentDesignItemID1=U_NEO-M9N-00B
+ComponentSymbolReference1=U_NEO-M9N-00B
+ComponentUpdate1=1
+ComponentIsDeviceSheet1=0
 FullReplace=1
 UpdateDesignatorLock=1
 UpdatePartIDLock=1
@@ -1267,6 +1245,86 @@ RemoveParameters=0
 AddModels=1
 RemoveModels=1
 UpdateCurrentModels=1
+ParameterName0=Applications
+ParameterUpdate0=1
+ParameterName1=Capacitance
+ParameterUpdate1=1
+ParameterName2=Comment
+ParameterUpdate2=1
+ParameterName3=Component Kind
+ParameterUpdate3=1
+ParameterName4=componentlink1description
+ParameterUpdate4=1
+ParameterName5=componentlink1url
+ParameterUpdate5=1
+ParameterName6=componentlink2description
+ParameterUpdate6=1
+ParameterName7=componentlink2url
+ParameterUpdate7=1
+ParameterName8=Description
+ParameterUpdate8=1
+ParameterName9=Device Package
+ParameterUpdate9=1
+ParameterName10=Features
+ParameterUpdate10=1
+ParameterName11=lastupdated
+ParameterUpdate11=1
+ParameterName12=Library Reference
+ParameterUpdate12=1
+ParameterName13=Lifecycle Status
+ParameterUpdate13=1
+ParameterName14=manufacturer
+ParameterUpdate14=1
+ParameterName15=Mfr_Name
+ParameterUpdate15=1
+ParameterName16=Minimum Order
+ParameterUpdate16=1
+ParameterName17=Mounting Type
+ParameterUpdate17=1
+ParameterName18=Operating Temperature
+ParameterUpdate18=1
+ParameterName19=Package / Case
+ParameterUpdate19=1
+ParameterName20=packaging
+ParameterUpdate20=1
+ParameterName21=Part Number
+ParameterUpdate21=1
+ParameterName22=Part Status
+ParameterUpdate22=1
+ParameterName23=partid
+ParameterUpdate23=1
+ParameterName24=price
+ParameterUpdate24=1
+ParameterName25=RefDes
+ParameterUpdate25=1
+ParameterName26=series
+ParameterUpdate26=1
+ParameterName27=Size / Dimension
+ParameterUpdate27=1
+ParameterName28=Supplier 1
+ParameterUpdate28=1
+ParameterName29=Supplier Part Number 1
+ParameterUpdate29=1
+ParameterName30=Temperature Coefficient
+ParameterUpdate30=1
+ParameterName31=Thickness (Max)
+ParameterUpdate31=1
+ParameterName32=Tolerance
+ParameterUpdate32=1
+ParameterName33=Type
+ParameterUpdate33=1
+ParameterName34=Value
+ParameterUpdate34=1
+ParameterName35=Voltage - Rated
+ParameterUpdate35=1
+ModelTypeGroup0=PCBLIB
+ModelTypeUpdate0=1
+ModelType0=PCBLIB
+ModelName0=CAP 0603_1608
+ModelUpdate0=1
+ModelType1=PCBLIB
+ModelName1=SMT_9N-00B_UBL
+ModelUpdate1=1
 
 [DatabaseUpdateOptions]
 SelectedOnly=0
