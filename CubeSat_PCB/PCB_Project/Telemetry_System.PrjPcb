@@ -52,6 +52,23 @@ PrefsVaultGUID=
 PrefsRevisionGUID=
 
 [Document1]
+DocumentPath=Components\footprints\581-M09-213L462.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=FTKIJRHW
+
+[Document2]
 DocumentPath=Components\footprints\TPS631000DRLR.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -68,7 +85,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=POKSUVSK
 
-[Document2]
+[Document3]
 DocumentPath=Components\symbols\U_TCA9406DCUR.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -85,7 +102,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=DZSZMGHI
 
-[Document3]
+[Document4]
 DocumentPath=Components\symbols\U_BME280.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -102,7 +119,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=XYTNIDCN
 
-[Document4]
+[Document5]
 DocumentPath=Components\symbols\U_XBP9B-DMST-022.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -119,7 +136,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=BSNXQTEE
 
-[Document5]
+[Document6]
 DocumentPath=Components\symbols\J_DM3CS-SF.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -136,7 +153,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=EQBMJONA
 
-[Document6]
+[Document7]
 DocumentPath=Components\symbols\U_LSM9DS1TR.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -153,7 +170,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=KHQELMQP
 
-[Document7]
+[Document8]
 DocumentPath=Components\symbols\J_B4B-PH-SM4-TB.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -170,7 +187,24 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=PCASNZCZ
 
-[Document8]
+[Document9]
+DocumentPath=Components\symbols\U_BQ27427YZFR.SchLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=EWESKTZM
+
+[Document10]
 DocumentPath=Components\symbols\U_STM32F411CEU6.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -187,7 +221,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=YXSNWCXA
 
-[Document9]
+[Document11]
 DocumentPath=Components\symbols\U_TPS82698SIPR.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -204,7 +238,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=GVPHGYVO
 
-[Document10]
+[Document12]
 DocumentPath=Components\symbols\U_NEO-M9N-00B.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -221,7 +255,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=WKXRNGSZ
 
-[Document11]
+[Document13]
 DocumentPath=MCU.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -238,7 +272,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=PHPSQUEO
 
-[Document12]
+[Document14]
 DocumentPath=..\..\..\..\..\Public\Documents\Altium\AD24\Templates\Telemetry System Schematic Template.SchDot
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -255,7 +289,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=YIFKJLPF
 
-[Document13]
+[Document15]
 DocumentPath=Telemetry_System.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -272,7 +306,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=SGIHABBE
 
-[Document14]
+[Document16]
 DocumentPath=BMC.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -289,7 +323,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=DRKHASDJ
 
-[Document15]
+[Document17]
 DocumentPath=Peripherals.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -306,7 +340,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=PSOJGMJI
 
-[Document16]
+[Document18]
 DocumentPath=Components\footprints\NEO-M9N-00B.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -323,7 +357,24 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=MSEVSQSV
 
-[Document17]
+[Document19]
+DocumentPath=Components\symbols\J_581-M09-213L462.SchLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=LSMOQPFY
+
+[Document20]
 DocumentPath=Components\footprints\DM3CS-SF.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -340,7 +391,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=CEEOSJOQ
 
-[Document18]
+[Document21]
 DocumentPath=Components\footprints\B4B-PH-SM4-TB.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -357,7 +408,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=BRCRCSXV
 
-[Document19]
+[Document22]
 DocumentPath=Components\footprints\TCA9406DCUR.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -374,7 +425,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=BAIAREHJ
 
-[Document20]
+[Document23]
 DocumentPath=Components\footprints\XBP9B-DMST-022.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -391,7 +442,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=LLSDPDKL
 
-[Document21]
+[Document24]
 DocumentPath=Components\footprints\STM32F411CEU6.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -408,7 +459,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=RBICBQBA
 
-[Document22]
+[Document25]
 DocumentPath=Components\symbols\U_TPS631000DRLR.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -425,7 +476,24 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=MIFDWNXV
 
-[Document23]
+[Document26]
+DocumentPath=Components\footprints\BQ27427YZFR.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=RVJFQYCJ
+
+[Document27]
 DocumentPath=Components\footprints\LSM9DS1TR.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -442,7 +510,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=YOWYHNGS
 
-[Document24]
+[Document28]
 DocumentPath=Components\footprints\TPS82698SIPR.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -459,7 +527,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=YNUWEIBT
 
-[Document25]
+[Document29]
 DocumentPath=Components\footprints\BME280.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -476,7 +544,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=YBPBFOBQ
 
-[Document26]
+[Document30]
 DocumentPath=..\..\..\..\..\Public\Documents\Altium\AD24\Library\ExportIntLib\Components - 24.04.24 - 00.32\Components - 24.04.24 - 00.32.IntLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -493,7 +561,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document27]
+[Document31]
 DocumentPath=Telemetry_System.BomDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -510,7 +578,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document28]
+[Document32]
 DocumentPath=Telemetry_System.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
