@@ -290,40 +290,6 @@ GenerateClassCluster=0
 DocumentUniqueId=YIFKJLPF
 
 [Document15]
-DocumentPath=Telemetry_System.SchDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=0
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=SGIHABBE
-
-[Document16]
-DocumentPath=BMC.SchDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=2
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=DRKHASDJ
-
-[Document17]
 DocumentPath=Peripherals.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -340,7 +306,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=PSOJGMJI
 
-[Document18]
+[Document16]
 DocumentPath=Components\footprints\NEO-M9N-00B.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -357,7 +323,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=MSEVSQSV
 
-[Document19]
+[Document17]
 DocumentPath=Components\symbols\J_581-M09-213L462.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -374,7 +340,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=LSMOQPFY
 
-[Document20]
+[Document18]
 DocumentPath=Components\footprints\DM3CS-SF.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -391,7 +357,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=CEEOSJOQ
 
-[Document21]
+[Document19]
 DocumentPath=Components\footprints\B4B-PH-SM4-TB.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -408,7 +374,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=BRCRCSXV
 
-[Document22]
+[Document20]
 DocumentPath=Components\footprints\TCA9406DCUR.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -425,7 +391,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=BAIAREHJ
 
-[Document23]
+[Document21]
 DocumentPath=Components\footprints\XBP9B-DMST-022.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -442,7 +408,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=LLSDPDKL
 
-[Document24]
+[Document22]
 DocumentPath=Components\footprints\STM32F411CEU6.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -459,7 +425,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=RBICBQBA
 
-[Document25]
+[Document23]
 DocumentPath=Components\symbols\U_TPS631000DRLR.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -476,7 +442,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=MIFDWNXV
 
-[Document26]
+[Document24]
 DocumentPath=Components\footprints\BQ27427YZFR.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -493,7 +459,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=RVJFQYCJ
 
-[Document27]
+[Document25]
 DocumentPath=Components\footprints\LSM9DS1TR.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -510,7 +476,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=YOWYHNGS
 
-[Document28]
+[Document26]
 DocumentPath=Components\footprints\TPS82698SIPR.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -527,7 +493,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=YNUWEIBT
 
-[Document29]
+[Document27]
 DocumentPath=Components\footprints\BME280.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -544,7 +510,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=YBPBFOBQ
 
-[Document30]
+[Document28]
 DocumentPath=..\..\..\..\..\Public\Documents\Altium\AD24\Library\ExportIntLib\Components - 24.04.24 - 00.32\Components - 24.04.24 - 00.32.IntLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -561,7 +527,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document31]
+[Document29]
 DocumentPath=Telemetry_System.BomDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -578,7 +544,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document32]
+[Document30]
 DocumentPath=Telemetry_System.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
