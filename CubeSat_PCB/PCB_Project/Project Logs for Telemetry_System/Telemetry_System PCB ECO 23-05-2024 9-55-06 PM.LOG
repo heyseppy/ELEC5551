@@ -1,0 +1,3 @@
+Added Pin To Net: NetName=SS_SDCARD Pin=J?-2
+Added Net: Name=SS_SDCARD
+Added Room: Name=Telemetry_System

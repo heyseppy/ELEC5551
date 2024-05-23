@@ -1,0 +1,19 @@
+Added Component: Designator=U4(XCVR_NEO-M9N-00B)
+Add component (AddParameter): Name = "Mfr_Name"; Value = "Ublox"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Type"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GPS_SAFEBOOT Pin=U4-1
+Added Pin To Net: NetName=GND Pin=U4-2
+Added Pin To Net: NetName=GPS_PPS Pin=U4-3
+Added Pin To Net: NetName=GPS_INT Pin=U4-4
+Added Pin To Net: NetName=GPS_RST Pin=U4-8
+Added Pin To Net: NetName=VCC _RF Pin=U4-9
+Added Pin To Net: NetName=GND Pin=U4-10
+Added Pin To Net: NetName=GPS_Antenna Pin=U4-11
+Added Pin To Net: NetName=GND Pin=U4-12
+Added Pin To Net: NetName=GND Pin=U4-13
+Added Pin To Net: NetName=SDA Pin=U4-18
+Added Pin To Net: NetName=SCL Pin=U4-19
+Added Pin To Net: NetName=+3V3 Pin=U4-23
+Added Pin To Net: NetName=GND Pin=U4-24
+Added Member To Class: ClassName=U_Peripherals Member=Component U4 NEO-M9N-00B

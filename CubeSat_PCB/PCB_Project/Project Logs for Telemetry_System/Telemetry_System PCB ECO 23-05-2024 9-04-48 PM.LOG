@@ -1,0 +1,25 @@
+Removed Pin From Net: NetName=MOSI Pin=J4-3
+Removed Pin From Net: NetName=+3V3 Pin=J4-4
+Removed Pin From Net: NetName=SCLK Pin=J4-5
+Removed Pin From Net: NetName=GND Pin=J4-6
+Removed Pin From Net: NetName=MISO Pin=J4-7
+Removed Pin From Net: NetName=GND Pin=J4-10
+Removed Pin From Net: NetName=GND Pin=J4-11
+Removed Pin From Net: NetName=GND Pin=J4-12
+Removed Pin From Net: NetName=GND Pin=J4-13
+Removed Member From Class: ClassName=U_Peripherals Member=J4
+Added Component: Designator=J?(DM3CS-SF_HIR)
+Add component (AddParameter): Name = "Mfr_Name"; Value = "Hirose"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Type"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=MOSI Pin=J?-3
+Added Pin To Net: NetName=+3V3 Pin=J?-4
+Added Pin To Net: NetName=SCLK Pin=J?-5
+Added Pin To Net: NetName=GND Pin=J?-6
+Added Pin To Net: NetName=MISO Pin=J?-7
+Added Pin To Net: NetName=GND Pin=J?-10
+Added Pin To Net: NetName=GND Pin=J?-11
+Added Pin To Net: NetName=GND Pin=J?-12
+Added Pin To Net: NetName=GND Pin=J?-13
+Add Net: Net with name "CS_SDCARD" already exists
+Added Member To Class: ClassName=U_Peripherals Member=Component J? J_DM3CS-SF

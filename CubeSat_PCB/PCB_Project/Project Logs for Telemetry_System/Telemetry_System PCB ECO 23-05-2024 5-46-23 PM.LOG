@@ -1,0 +1,15 @@
+Change Component Footprint: Designator=U1 Old Footprint=STM-UFQFPN48_L New Footprint=UFQFPN-48_7X7X0P55MM
+Change Component Comment : Designator=U1 Old Comment=STM32F411CEU6 New Comment=U_STM32F411CEU6
+Change Component Designator: OldDesignator=C? NewDesignator=C30
+Change Component Designator: OldDesignator=C? NewDesignator=C31
+Change Managed Component Library Link : Designator=U1 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID= Old ItemGUID=901EF13B-8E2B-4E53-9BA5-3DEEF30FF800 New ItemGUID= Old RevisionGUID=CC4CED27-7010-435A-8D64-33AB91A3A679 New RevisionGUID=
+Change component parameters: Designator = "U1" ("U1"); Footprint = "STM-UFQFPN48_L"; UniqueID = "\TPZMNEPZ" ("\TPZMNEPZ")
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "STMicroelectronics"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "Type"; VariantName = "[No Variations]"
+Added Component: Designator=U9(UFQFPN-48_7X7X0P55MM)
+Add component (AddParameter): Name = "Mfr_Name"; Value = "STMicroelectronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Type"; VariantName = "[No Variations]"
+Added Member To Class: ClassName=U_Peripherals Member=Component C31 0.1 µF
+Added Member To Class: ClassName=Telemetry_System Member=Component U9 U_STM32F411CEU6

@@ -1,0 +1,7 @@
+Added Component: Designator=U2(SOIC_82043816_WRE)
+Add component (AddParameter): Name = "Mfr_Name"; Value = "Wurth Electronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Type"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=U2-2
+Added Pin To Net: NetName=NRST Pin=U2-3
+Added Member To Class: ClassName=Telemetry_System Member=Component U2 U_430182043816

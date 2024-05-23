@@ -1,0 +1,5 @@
+Change Component Designator: OldDesignator=J? NewDesignator=J2
+Change Component Designator: OldDesignator=J? NewDesignator=J3
+Change Component Designator: OldDesignator=J? NewDesignator=J5
+Added Member To Class: ClassName=U_Peripherals Member=Component J2 J_B4B-PH-SM4-TB
+Added Member To Class: ClassName=U_Peripherals Member=Component J5 J_B4B-PH-SM4-TB

@@ -1,0 +1,42 @@
+Change Component Designator: OldDesignator=C27 NewDesignator=C29
+Change Component Designator: OldDesignator=C28 NewDesignator=C30
+Change Component Designator: OldDesignator=C29 NewDesignator=C31
+Change Component Designator: OldDesignator=C30 NewDesignator=C27
+Change Component Designator: OldDesignator=C31 NewDesignator=C28
+Change Component Designator: OldDesignator=J? NewDesignator=J2
+Change Component Designator: OldDesignator=L2 NewDesignator=L1
+Change Component Designator: OldDesignator=R12 NewDesignator=R13
+Change Component Designator: OldDesignator=R13 NewDesignator=R14
+Change Component Designator: OldDesignator=R14 NewDesignator=R12
+Change Component Designator: OldDesignator=Y1 NewDesignator=Y?
+Change Component Designator: OldDesignator=Y2 NewDesignator=Y?
+Added Component: Designator=J3(CONN_B4B-PH-SM4-TB_JST)
+Add component (AddParameter): Name = "Mfr_Name"; Value = "JST"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Type"; VariantName = "[No Variations]"
+Added Component: Designator=J4(CONN_B4B-PH-SM4-TB_JST)
+Add component (AddParameter): Name = "Mfr_Name"; Value = "JST"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Type"; VariantName = "[No Variations]"
+Added Component: Designator=J5(CONN_B4B-PH-SM4-TB_JST)
+Add component (AddParameter): Name = "Mfr_Name"; Value = "JST"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Type"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+3V3 Pin=J3-1
+Added Pin To Net: NetName=SDA Pin=J3-2
+Added Pin To Net: NetName=SCL Pin=J3-3
+Added Pin To Net: NetName=GND Pin=J3-4
+Added Pin To Net: NetName=+3V3 Pin=J4-1
+Added Pin To Net: NetName=SDA Pin=J4-2
+Added Pin To Net: NetName=SCL Pin=J4-3
+Added Pin To Net: NetName=GND Pin=J4-4
+Added Pin To Net: NetName=+3V3 Pin=J5-1
+Added Pin To Net: NetName=SDA Pin=J5-2
+Added Pin To Net: NetName=SCL Pin=J5-3
+Added Pin To Net: NetName=GND Pin=J5-4
+Change Net Name : Old Net Name=NetL2_1 New Net Name=NetL1_1
+Change Net Name : Old Net Name=NetL2_2 New Net Name=NetL1_2
+Change Net Name : Old Net Name=NetR14_2 New Net Name=NetR12_2
+Added Member To Class: ClassName=U_Peripherals Member=Component J3 J_B4B-PH-SM4-TB
+Added Member To Class: ClassName=U_Peripherals Member=Component J4 J_B4B-PH-SM4-TB
+Added Member To Class: ClassName=U_Peripherals Member=Component J5 J_B4B-PH-SM4-TB
