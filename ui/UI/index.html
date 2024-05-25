@@ -1,0 +1,303 @@
+<!-- HTML is used to structure content on the web. Think of it as the skeleton of a website—it outlines the structure with elements like headings, paragraphs, links, and images. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telemetry Data Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- START OF BODY -->
+<div class="container">
+  <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px;">
+    <div style="flex: 1;"></div>
+    <div style="flex: 2; text-align: center;">
+      <h1 style="margin: 0;">Telemetry Data Dashboard</h1>
+    </div>
+    <div style="flex: 1; text-align: right;">
+      <div id="date-display" style="display: block;"></div>
+      <div id="time-display" style="display: block;"></div>
+    </div>
+  </div>
+  
+   <button id="toggleButton" class="start-button">Start</button>
+  
+  <h2>Location Data</h2>
+    <!-- LOCATION BLOCKS -->
+       <div class="sensor-row">
+      <!-- GPS -->
+      <div class="sensorlayout">
+  <svg class="icon" viewBox="0 0 300 300">
+    <use href="#map-icon"></use>
+  </svg>
+  <p>GPS</p>
+        <!-- Example demosntration of pop up -->
+  <div id="popupGPS" class="popup" style="display: none;">
+    <img src="https://i.imgur.com/9wUEVJe.jpg" alt="logo" style="width: 100%; height: auto;">
+    <button onclick="document.getElementById('popupGPS').style.display='none'">Close</button>
+  </div>
+</div>
+
+  
+  <!-- Radio Triangulation -->
+      <div class="sensorlayout">
+        <svg class="iconRF" viewBox="0 0 300 300">
+          <use href="#radio-triangulation-icon"></use>
+        </svg>
+        <p>Radio Triangulation</strong></p>
+        <!-- Popup for Radio Triangulation Image -->
+        <div id="popupGPS" class="popup" style="display: none;">
+          <img src="Main/Radio Triangulation/RT_Image_Latest.png" alt="logo" style="width: 100%; height: auto;">
+          <button onclick="document.getElementById('popupGPS').style.display='none'">Close</button>
+      </div>
+
+      </div>
+
+
+  <!-- Picture -->
+      <div class="sensorlayout">
+        <svg class="iconPIC" viewBox="0 0 300 300">
+          <use href="#picture-icon"></use>
+        </svg>
+        <p>Onboard Picture</strong></p>
+  <!-- Popup for Radio Triangulation Image -->
+        <div id="popupGPS" class="popup" style="display: none;">
+          <img src="Main/Onboard Pictures/OnBoardPicture_Latest.png" alt="logo" style="width: 100%; height: auto;">
+          <button onclick="document.getElementById('popupGPS').style.display='none'">Close</button>
+      </div>
+      </div>
+    </div>
+
+  
+
+  <!-- LOCATION BLOCKS SECOND ROW -->
+       <div class="sensor-row">
+      <!-- GPS -->
+      <div class="sensorlayout">
+        <svg class="iconRF" viewBox="0 0 300 300">
+          <use href="#altitude-icon"></use>
+        </svg>
+        <p>Altitude: <strong><span id="altitude-latest">--</span> m</strong></p>
+      </div>
+
+  
+  <!-- Yaw -->
+      <div class="sensorlayout">
+        <svg class="iconRF" viewBox="0 0 300 300">
+          <use href="#yaw-icon"></use>
+        </svg>
+        <p>Yaw: <strong><span id="yaw-latest">--</span> °/second</strong></p>
+      </div>
+
+
+
+  <!-- Bearing -->
+      <div class="sensorlayout">
+        <svg class="iconRF" viewBox="0 0 300 300">
+          <use href="#bearing-icon"></use>
+        </svg>
+        <p>Bearing: <strong><span id="yaw-latest">--</span> °</strong></p>
+      </div>
+
+</div>
+
+
+
+
+
+
+
+
+  
+
+  <h2>Environmental Sensors</h2>
+  
+  <!-- TEMP BLOCKS -->
+  <div class="sensor-row">
+    <!-- Temp 1 -->
+    <div class="tempsensor">
+      <svg class="icon" viewBox="0 0 300 300">
+        <use href="#temperature-icon"></use>
+      </svg>
+      <p>Temp Sensor 1: <strong>22 °c</strong></p>
+      <div id="popup1" class="popup" style="display: none;">
+        <p>Temp Sensor 1</p>
+        <p>Current Temperature: <strong> 22 °c</strong></p>
+        <svg id="trendGraph1" width="280" height="150" style="border: 1px solid #ccc;"></svg>
+        <button onclick="document.getElementById('popup1').style.display='none'">Close</button>
+      </div>
+    </div>
+
+    <!-- Temp 2 -->
+    <div class="tempsensor">
+      <svg class="icon" viewBox="0 0 300 300">
+        <use href="#temperature-icon"></use>
+      </svg>
+      <p>Temp Sensor 2: <strong>24 °c</strong></p>
+      <div id="popup2" class="popup" style="display: none;">
+        <p>Temp Sensor 2</p>
+        <p>Current Temperature: <strong> 24 °c</strong></p>
+        <svg id="trendGraph2" width="280" height="150" style="border: 1px solid #ccc;"></svg>
+        <button onclick="document.getElementById('popup2').style.display='none'">Close</button>
+      </div>
+    </div>
+
+    <!-- Temp 3 -->
+    <div class="tempsensor">
+      <svg class="icon" viewBox="0 0 300 300">
+        <use href="#temperature-icon"></use>
+      </svg>
+      <p>Temp Sensor 3: <strong><span id="temp3-latest">--</span> °c</strong></p>
+    </div>
+
+    <!-- Temp 4 -->
+    <div class="tempsensor">
+      <svg class="icon" viewBox="0 0 300 300">
+        <use href="#temperature-icon"></use>
+      </svg>
+      <p>Temp Sensor 4: <strong><span id="temp4-latest">--</span> °c</strong></p>
+    </div>
+
+    <!-- Temp 5 -->
+    <div class="tempsensor">
+      <svg class="icon" viewBox="0 0 300 300">
+        <use href="#temperature-icon"></use>
+      </svg>
+      <p>Temp Sensor 5: <strong><span id="temp5-latest">--</span> °c</strong></p>
+    </div>
+  </div>
+
+  <!-- HUMIDITY BLOCKS -->
+       <div class="sensor-row">
+      <!-- Temp 7 -->
+      <div class="sensorlayout">
+        <svg class="icon" viewBox="0 0 300 300">
+          <use href="#humidity-icon"></use>
+        </svg>
+        <p>Humidity Sensor: <strong><span id="humidity-latest">--</span> %</strong></p>
+      </div>
+    </div>
+  
+  
+  <!-- PRESSURE BLOCKS -->
+       <div class="sensor-row">
+      <!-- Pressure 1 -->
+      <div class="sensorlayout">
+        <svg class="icon" viewBox="0 0 300 300">
+          <use href="#pressure-icon"></use>
+        </svg>
+        <p>Pressure Sensor: <strong><span id="humidity-latest">--</span> Pa</strong></p>
+      </div>
+  
+  <!-- Pressure 2 -->
+      <div class="sensorlayout">
+        <svg class="icon" viewBox="0 0 300 300">
+          <use href="#pressure-icon"></use>
+        </svg>
+        <p>Pressure Sensor: <strong><span id="humidity-latest">--</span> Pa</strong></p>
+      </div>
+    </div>
+
+
+ 
+  <h2>Motion Sensors</h2>
+<div class="sensor-row">
+  <!-- Speed -->
+      <div class="sensorlayout">
+        <svg class="icon" viewBox="0 0 300 300">
+          <use href="#speed-icon"></use>
+        </svg>
+        <p>Speed Sensor: <strong><span id="speed-latest">--</span> m/s</strong></p>
+      </div>
+    
+  <!-- Acceleration -->
+      <div class="sensorlayout">
+        <svg class="icon" viewBox="0 0 300 300">
+          <use href="#acceleration-icon"></use>
+        </svg>
+        <p>Acceleration Sensor: <strong><span id="acceleration-latest">--</span> m/s^2</strong></p>
+      </div>
+    </div>
+
+
+
+
+
+  <h2>Battery Sensor</h2>
+<div class="sensor-row">
+  <!-- Battery -->
+      <div class="sensorlayout">
+        <svg class="icon" viewBox="0 0 300 300">
+          <use href="#battery-icon"></use>
+        </svg>
+        <p>Battery: <strong><span id="battery-latest">--</span> %</strong></p>
+      </div>
+    </div>
+
+
+  
+  </div>
+<!--END OF BODY -->
+
+
+
+  <!-- Placeholder for the Temperature Trend Graph -->
+  <div>
+    <canvas id="tempTrendGraph"></canvas>
+  </div>
+</div>
+
+
+
+
+<!------------- ICONS ------------->
+<!--Temp Sensor Icon -->
+<svg style="display: none;">
+  <symbol id="temperature-icon" viewBox="0 0 512 512" width="100" title="temperature-low">
+    <path d="M416 0c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm0 128c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm-160-16C256 50.1 205.9 0 144 0S32 50.1 32 112v166.5C12.3 303.2 0 334 0 368c0 79.5 64.5 144 144 144s144-64.5 144-144c0-34-12.3-64.9-32-89.5V112zM144 448c-44.1 0-80-35.9-80-80 0-25.5 12.2-48.9 32-63.8V112c0-26.5 21.5-48 48-48s48 21.5 48 48v192.2c19.8 14.8 32 38.3 32 63.8 0 44.1-35.9 80-80 80zm16-125.1V304c0-8.8-7.2-16-16-16s-16 7.2-16 16v18.9c-18.6 6.6-32 24.2-32 45.1 0 26.5 21.5 48 48 48s48-21.5 48-48c0-20.9-13.4-38.5-32-45.1z" />
+  </symbol>
+
+
+<svg style="display: none;">
+  <symbol id="humidity-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100"><path d="M192 512C86 512 0 426 0 320C0 228.8 130.2 57.7 166.6 11.7C172.6 4.2 181.5 0 191.1 0h1.8c9.6 0 18.5 4.2 24.5 11.7C253.8 57.7 384 228.8 384 320c0 106-86 192-192 192zM96 336c0-8.8-7.2-16-16-16s-16 7.2-16 16c0 61.9 50.1 112 112 112c8.8 0 16-7.2 16-16s-7.2-16-16-16c-44.2 0-80-35.8-80-80z"/></svg>
+
+
+
+<svg style="display: none;">
+  <symbol id="pressure-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100"><path d="M0 224c0 53 43 96 96 96h44.7c9.5-23.5 32.5-40 59.3-40c2 0 3.9 .1 5.8 .3C217.6 265.5 235.7 256 256 256s38.4 9.5 50.2 24.3c1.9-.2 3.9-.3 5.8-.3c26.9 0 49.9 16.5 59.3 40H416c53 0 96-43 96-96s-43-96-96-96c-.5 0-1.1 0-1.6 0c1.1-5.2 1.6-10.5 1.6-16c0-44.2-35.8-80-80-80c-24.3 0-46.1 10.9-60.8 28C256.5 24.3 219.1 0 176 0C114.1 0 64 50.1 64 112c0 7.1 .7 14.1 1.9 20.8C27.6 145.4 0 181.5 0 224zm288 96c0-17.7-14.3-32-32-32s-32 14.3-32 32c0 1 .1 2.1 .1 3.1c-.7-.8-1.4-1.6-2.1-2.3c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3c.7 .7 1.5 1.4 2.3 2.1c-1-.1-2.1-.1-3.1-.1c-17.7 0-32 14.3-32 32s14.3 32 32 32c1 0 2.1-.1 3.1-.1c-.8 .7-1.6 1.3-2.3 2.1c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0c.7-.7 1.4-1.5 2.1-2.3c-.1 1-.1 2.1-.1 3.1c0 17.7 14.3 32 32 32s32-14.3 32-32c0-1-.1-2.1-.1-3.1c.7 .8 1.3 1.6 2.1 2.3c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3c-.7-.7-1.5-1.4-2.3-2.1c1 .1 2.1 .1 3.1 .1c17.7 0 32-14.3 32-32s-14.3-32-32-32c-1 0-2.1 .1-3.1 .1c.8-.7 1.6-1.3 2.3-2.1c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0c-.7 .7-1.4 1.5-2.1 2.3c.1-1 .1-2.1 .1-3.1zM48 448a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm416 0a48 48 0 1 0 0-96 48 48 0 1 0 0 96z"/></svg>
+
+
+<svg style="display: none;">
+  <symbol id="map-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100"><path d="M384 476.1L192 421.2V35.9L384 90.8V476.1zm32-1.2V88.4L543.1 37.5c15.8-6.3 32.9 5.3 32.9 22.3V394.6c0 9.8-6 18.6-15.1 22.3L416 474.8zM15.1 95.1L160 37.2V423.6L32.9 474.5C17.1 480.8 0 469.2 0 452.2V117.4c0-9.8 6-18.6 15.1-22.3z"/></svg>
+  
+  
+  <svg style="display: none;">
+  <symbol id="radio-triangulation-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 580" width="110"><path d="M62.6 2.3C46.2-4.3 27.6 3.6 20.9 20C7.4 53.4 0 89.9 0 128s7.4 74.6 20.9 108c6.6 16.4 25.3 24.3 41.7 17.7S86.9 228.4 80.3 212C69.8 186.1 64 157.8 64 128s5.8-58.1 16.3-84C86.9 27.6 79 9 62.6 2.3zm450.8 0C497 9 489.1 27.6 495.7 44C506.2 69.9 512 98.2 512 128s-5.8 58.1-16.3 84c-6.6 16.4 1.3 35 17.7 41.7s35-1.3 41.7-17.7c13.5-33.4 20.9-69.9 20.9-108s-7.4-74.6-20.9-108C548.4 3.6 529.8-4.3 513.4 2.3zM340.1 165.2c7.5-10.5 11.9-23.3 11.9-37.2c0-35.3-28.7-64-64-64s-64 28.7-64 64c0 13.9 4.4 26.7 11.9 37.2L98.9 466.8c-7.3 16.1-.2 35.1 15.9 42.4s35.1 .2 42.4-15.9L177.7 448H398.3l20.6 45.2c7.3 16.1 26.3 23.2 42.4 15.9s23.2-26.3 15.9-42.4L340.1 165.2zM369.2 384H206.8l14.5-32H354.7l14.5 32zM288 205.3L325.6 288H250.4L288 205.3zM163.3 73.6c5.3-12.1-.2-26.3-12.4-31.6s-26.3 .2-31.6 12.4C109.5 77 104 101.9 104 128s5.5 51 15.3 73.6c5.3 12.1 19.5 17.7 31.6 12.4s17.7-19.5 12.4-31.6C156 165.8 152 147.4 152 128s4-37.8 11.3-54.4zM456.7 54.4c-5.3-12.1-19.5-17.7-31.6-12.4s-17.7 19.5-12.4 31.6C420 90.2 424 108.6 424 128s-4 37.8-11.3 54.4c-5.3 12.1 .2 26.3 12.4 31.6s26.3-.2 31.6-12.4C466.5 179 472 154.1 472 128s-5.5-51-15.3-73.6z"/></svg>
+  
+    <svg style="display: none;">
+  <symbol id="picture-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 580" width="110"><path d="M448 80c8.8 0 16 7.2 16 16V415.8l-5-6.5-136-176c-4.5-5.9-11.6-9.3-19-9.3s-14.4 3.4-19 9.3L202 340.7l-30.5-42.7C167 291.7 159.8 288 152 288s-15 3.7-19.5 10.1l-80 112L48 416.3l0-.3V96c0-8.8 7.2-16 16-16H448zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm80 192a48 48 0 1 0 0-96 48 48 0 1 0 0 96z"/></svg>
+  
+        <svg style="display: none;">
+  <symbol id="acceleration-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 580" width="110"><path d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm320 96c0-15.9-5.8-30.4-15.3-41.6l76.6-147.4c6.1-11.8 1.5-26.3-10.2-32.4s-26.2-1.5-32.4 10.2L262.1 288.3c-2-.2-4-.3-6.1-.3c-35.3 0-64 28.7-64 64s28.7 64 64 64s64-28.7 64-64z"/></svg>
+      
+    <svg style="display: none;">
+  <symbol id="speed-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 580" width="110"><path d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM288 96a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zM256 416c35.3 0 64-28.7 64-64c0-17.4-6.9-33.1-18.1-44.6L366 161.7c5.3-12.1-.2-26.3-12.3-31.6s-26.3 .2-31.6 12.3L257.9 288c-.6 0-1.3 0-1.9 0c-35.3 0-64 28.7-64 64s28.7 64 64 64zM176 144a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zM96 288a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm352-32a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/></svg>
+
+      
+     <svg style="display: none;">
+  <symbol id="battery-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 580" width="110"><path d="M464 160c8.8 0 16 7.2 16 16V336c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V176c0-8.8 7.2-16 16-16H464zM80 96C35.8 96 0 131.8 0 176V336c0 44.2 35.8 80 80 80H464c44.2 0 80-35.8 80-80V320c17.7 0 32-14.3 32-32V224c0-17.7-14.3-32-32-32V176c0-44.2-35.8-80-80-80H80zm272 96H96V320H352V192z"/></svg>
+  </svg>
+      
+     <svg style="display: none;">
+  <symbol id="altitude-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 580" width="110"><path d="M256 32c12.5 0 24.1 6.4 30.8 17L503.4 394.4c5.6 8.9 8.6 19.2 8.6 29.7c0 30.9-25 55.9-55.9 55.9H55.9C25 480 0 455 0 424.1c0-10.5 3-20.8 8.6-29.7L225.2 49c6.6-10.6 18.3-17 30.8-17zm65 192L256 120.4 176.9 246.5l18.3 24.4c6.4 8.5 19.2 8.5 25.6 0l25.6-34.1c6-8.1 15.5-12.8 25.6-12.8h49z"/></svg>
+
+     <svg style="display: none;">
+  <symbol id="yaw-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 580" width="110"><path d="M463.5 224H472c13.3 0 24-10.7 24-24V72c0-9.7-5.8-18.5-14.8-22.2s-19.3-1.7-26.2 5.2L413.4 96.6c-87.6-86.5-228.7-86.2-315.8 1c-87.5 87.5-87.5 229.3 0 316.8s229.3 87.5 316.8 0c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0c-62.5 62.5-163.8 62.5-226.3 0s-62.5-163.8 0-226.3c62.2-62.2 162.7-62.5 225.3-1L327 183c-6.9 6.9-8.9 17.2-5.2 26.2s12.5 14.8 22.2 14.8H463.5z"/></svg>
+       
+       <svg style="display: none;">
+  <symbol id="bearing-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 580" width="110"><path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm306.7 69.1L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/></svg>
+
+    <script src="script.js"></script>
+</body>
+</html>
