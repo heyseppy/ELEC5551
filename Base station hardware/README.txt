@@ -1,0 +1,1 @@
+.f3z document requires Autodesk fusion 360 to open and view the base station CAD project.
