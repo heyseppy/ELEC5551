@@ -1,0 +1,35 @@
+Removed Pin From Net: NetName=GND Pin=U7-1
+Removed Pin From Net: NetName=+1V8 Pin=U7-2
+Removed Pin From Net: NetName=SDA_1V8 Pin=U7-3
+Removed Pin From Net: NetName=SCL_1V8 Pin=U7-4
+Removed Pin From Net: NetName=GND Pin=U7-5
+Removed Pin From Net: NetName=+1V8 Pin=U7-6
+Removed Pin From Net: NetName=GND Pin=U7-7
+Removed Pin From Net: NetName=+1V8 Pin=U7-8
+Removed Pin From Net: NetName=VBAT+ Pin=U9-1
+Removed Pin From Net: NetName=GND Pin=U9-3
+Removed Pin From Net: NetName=GND Pin=U9-4
+Removed Pin From Net: NetName=+1V8 Pin=U9-5
+Removed Pin From Net: NetName=GND Pin=U9-8
+Removed Pin From Net: NetName=GND Pin=U9-9
+Removed Pin From Net: NetName=GND Pin=U9-10
+Removed Pin From Net: NetName=GND Pin=U9-11
+Removed Pin From Net: NetName=+3V3 Pin=U9-12
+Removed Pin From Net: NetName=GND Pin=U9-13
+Removed Member From Class: ClassName=U_Peripherals Member=U9
+Added Component: Designator=U?(BME280)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "BME280"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=U?-1
+Added Pin To Net: NetName=+1V8 Pin=U?-2
+Added Pin To Net: NetName=SDA_1V8 Pin=U?-3
+Added Pin To Net: NetName=SCL_1V8 Pin=U?-4
+Added Pin To Net: NetName=GND Pin=U?-5
+Added Pin To Net: NetName=+1V8 Pin=U?-6
+Added Pin To Net: NetName=GND Pin=U?-7
+Added Pin To Net: NetName=+1V8 Pin=U?-8
+Added Member To Class: ClassName=U_Peripherals Member=Component U? U_BME280

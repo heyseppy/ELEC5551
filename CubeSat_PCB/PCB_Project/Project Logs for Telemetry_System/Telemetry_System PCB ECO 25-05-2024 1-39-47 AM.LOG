@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=MAG_DRDY Pin=U1-31
+Removed Pin From Net: NetName=A/G_INT2 Pin=U1-33
+Removed Pin From Net: NetName=MAG_INT Pin=U1-34
+Added Pin To Net: NetName=A/G_INT2 Pin=U1-31
+Added Pin To Net: NetName=MAG_INT Pin=U1-33
+Added Pin To Net: NetName=MAG_DRDY Pin=U1-34
