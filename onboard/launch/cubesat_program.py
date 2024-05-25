@@ -8,7 +8,8 @@ import hashlib
 import time
 from art import *
 from sys import getsizeof
-from machine import I2C, Pin, serial
+
+# from machine import I2C, Pin, serial
 
 '''
     @author Sep Kimiaei 2024 - ELEC5551 cubeSat design.
@@ -48,11 +49,12 @@ class cubeSat():
     def __init__(self, log_file, transmission_freq, public_key):
         
         # load configuration file for the cubesat
-        sensor_file = open('sensors/sensors.json')
+        sensor_file = open('../sensors/sensors.json')
         self.temporary_data = json.load(sensor_file)
 
         # set output disk file for cubesat onboard memory
         self.log_file = open(log_file, "a")
+        self.log_errors = {}
 
         # set cubesat energisation time (time of flight)
         self.start_time = time.time()
@@ -65,12 +67,29 @@ class cubeSat():
         self.transmission_freq = None
 
         # set up i2c bus. serial lines will be configured as each sensor is called.
-        self.cubesat_i2c = I2C(0, sda = sda, scl = scl, freq = 4000000)
+        if not simulation:
+            self.cubesat_i2c = I2C(0, sda = sda, scl = scl, freq = 4000000)
+        else:
+            self.cubesat_i2c = None
 
         self.print_debug()
 
-    def print_debug(self):
 
+    def error_management_system(self, error):
+        # append error to cubesat's error log
+        # use timestamp to mark the key
+        time_stamp = time.time()
+        self.log_errors[( time_stamp - self.start_time)] = error
+        
+        print()
+        print("!!!!")
+        print("Error Occurred at: ")
+        print("time-after-launch:", time_stamp)
+        print("Details:" , error)
+        print()
+
+    def print_debug(self):
+        # print debug to help visualise operation
         print()
         loading_screen =text2art("cubeSat  mcu") # return art as str in normal mode
         print(loading_screen)
@@ -94,13 +113,14 @@ class cubeSat():
             returns the value at the stored address after addressing whether or not it is serial 
             or i2c.
         '''
-
-        if self.temporary_data[data_key]["type"] == "i2c":
-            _out = self.cubesat_i2c.readfrom(self.temporary_data[data_key]["address"], 1)
-        elif self.temporary_data[data_key]["type"] == "serial":
-            self.cubesat_serial = Serial(self.temporary_data["address"])
-            _out = self.cubesat_serial_port.read(self.temporary_data[data_key]["address"])
-
+        if not simulation:
+            if self.temporary_data[data_key]["type"] == "i2c":
+                _out = self.cubesat_i2c.readfrom(self.temporary_data[data_key]["address"], 1)
+            elif self.temporary_data[data_key]["type"] == "serial":
+                self.cubesat_serial = Serial(self.temporary_data["address"])
+                _out = self.cubesat_serial_port.read(self.temporary_data[data_key]["address"])
+        else:
+            _out = -1
         # return the output data (analog)
         return _out
     
@@ -170,7 +190,14 @@ class cubeSat():
         for item, values in self.temporary_data.items():
             if item != "checksum":
                 print("scaled: ", item)
-                self.temporary_data[item]["scaled"] = float(self.temporary_data[item]["raw"]) * float(self.temporary_data[item]["scaling_factor"])
+                try:
+                     numerator = float(self.temporary_data[item]["raw"]) - float(self.temporary_data[item]["scale_min"])
+                     denominator = float(self.temporary_data[item]["scale_max"]) - float(self.temporary_data[item]["scale_min"])
+                     self.temporary_data[item]["scaled"] = float(numerator/denominator)
+                except ZeroDivisionError:
+                    self.error_management_system("arithmetic error during scaling operation for "+item)
+
+               
         print()
 
 
@@ -180,7 +207,18 @@ class cubeSat():
         # e.g. transmitSesnorpulse()
         # e.g. recordCameradata to temporary data buffer.
         pass
-    
+
+    def poll_gps(self):
+        # using our teams selected NEO6m GPS module
+        # while True:
+        #     if data available from GPS module:
+        #         read data from GPS module
+        #         parse GPS data (latitude, longitude, altitude, etc.)
+        #         process and use the GPS data as needed
+        #     else:
+        #         continue
+        pass
+
     def perform_parity_check(self):
         print("checksum performed")
         sensor_to_string = json.dumps(self.temporary_data, sort_keys=True)
