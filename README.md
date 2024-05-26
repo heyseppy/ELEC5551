@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="https://nasa3d.arc.nasa.gov/shared_assets/models/cubesat-1RU/Cubesat-1RUGeneric_428x321.png" alt="Satellite Image">
+  <img src="https://image.pngaaa.com/975/3126975-middle.png" alt="Satellite Image">
   <h1>ELEC5551 Electrical Design Project</h1>
 </p>
 
 ## Overview
-This repository houses all components of the ELEC5551 Electrical Design project conducted at [Your University Name]. The project includes comprehensive designs and software implementations for a sophisticated electrical system, focusing on both onboard and base station functionalities.
+This repository houses all components of the ELEC5551 Electrical Design project conducted at University of Western Australia. The project includes comprehensive designs and software implementations for a sophisticated electrical system, focusing on both onboard and base station functionalities.
 
 ## Repository Overview
 ### Base Station Software
