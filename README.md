@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://image.pngaaa.com/975/3126975-middle.png" alt="Satellite Image">
+  <img src="https://nasa3d.arc.nasa.gov/shared_assets/models/cubesat-1RU/Cubesat-1RUGeneric_428x321.png" alt="Satellite Image">
   <h1>ELEC5551 Electrical Design Project</h1>
 </p>
 
