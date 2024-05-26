@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Cartoon_space_rocket.png" alt="Satellite Image">
+  <img src="https://png.pngtree.com/element_our/png/20181113/rocket-launch-logo-icon-design-template-vector-illustration-png_236653.jpg" alt="Satellite Image">
   <h1>ELEC5551 Electrical Design Project</h1>
 </p>
 
