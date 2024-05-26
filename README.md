@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://nasa3d.arc.nasa.gov/shared_assets/models/cubesat-1RU/Cubesat-1RUGeneric_428x321.png" alt="Satellite Image">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Cartoon_space_rocket.png" alt="Satellite Image">
   <h1>ELEC5551 Electrical Design Project</h1>
 </p>
 
