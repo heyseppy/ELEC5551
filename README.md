@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://example.com/path_to_satellite_image.jpg" alt="Satellite Image">
+  <img src="https://nasa3d.arc.nasa.gov/shared_assets/models/cubesat-1RU/Cubesat-1RUGeneric_428x321.png" alt="Satellite Image">
   <h1>ELEC5551 Electrical Design Project</h1>
 </p>
 
@@ -10,17 +10,17 @@ This repository houses all components of the ELEC5551 Electrical Design project 
 ### Base Station Software
 | File Path                         | Description                                                                                       |
 |-----------------------------------|---------------------------------------------------------------------------------------------------|
-| `ui/CSV/CSVAppend.py`             | Logs GPS data into a CSV, ensuring all entries are unique.                                        |
-| `ui/CSV/NewFlight_csv.py`         | Prepares for new data collection by replacing the old CSV with a new template, storing past files.|
-| `ui/GPS_Map/GPSPlot.py`           | Plots GPS coordinates on a map and visualizes flight paths with altitude indicated by color.      |
-| `ui/GPS_Map/Map_Refresh.py`       | Prepares for new GPS plot image, provides template PNG of the map and stores old map.             |
-| `ui/MainDataProcessing.py`        | Processes data received via serial interface to prepare for display and logging for UI.           |
-| `ui/ReadDataFromSerialPort.py`    | Initiates data reception from the serial interface.                                               |
-| `ui/Start.py`                     | Initiates CSV appending process for data logging and process for GPS plotting.                    |
-| `ui/Stop.py`                      | Terminates data logging and GPS plotting processes; starts scripts for new templates.             |
-| `ui/UI/index.html`                | HTML file that structures the user interface layout.                                              |
-| `ui/UI/script.js`                 | JavaScript file that adds interactivity to the user interface.                                    |
-| `ui/UI/styles.css`                | CSS file that styles the user interface elements.                                                 |
+| `Base Station Software/CSV/CSVAppend.py`             | Logs GPS data into a CSV, ensuring all entries are unique.                                        |
+| `Base Station Software/CSV/NewFlight_csv.py`         | Prepares for new data collection by replacing the old CSV with a new template, storing past files.|
+| `Base Station Software/GPS_Map/GPSPlot.py`           | Plots GPS coordinates on a map and visualizes flight paths with altitude indicated by color.      |
+| `Base Station Software/GPS_Map/Map_Refresh.py`       | Prepares for new GPS plot image, provides template PNG of the map and stores old map.             |
+| `Base Station Software/MainDataProcessing.py`        | Processes data received via serial interface to prepare for display and logging for UI.           |
+| `Base Station Software/ReadDataFromSerialPort.py`    | Initiates data reception from the serial interface.                                               |
+| `Base Station Software/Start.py`                     | Initiates CSV appending process for data logging and process for GPS plotting.                    |
+| `Base Station Software/Stop.py`                      | Terminates data logging and GPS plotting processes; starts scripts for new templates.             |
+| `Base Station Software/UI/index.html`                | HTML file that structures the user interface layout.                                              |
+| `Base Station Software/UI/script.js`                 | JavaScript file that adds interactivity to the user interface.                                    |
+| `Base Station Software/UI/styles.css`                | CSS file that styles the user interface elements.                                                 |
 
 ### Base Station Hardware
 | File Path                         | Description                                                                                       |
@@ -31,7 +31,9 @@ This repository houses all components of the ELEC5551 Electrical Design project 
 ### Onboard Software
 | File Path                         | Description                                                                                       |
 |-----------------------------------|---------------------------------------------------------------------------------------------------|
-| `Base Station Hardware / Base_Station_Combined v34`             | Contains entire Autodesk Fusion 360 workspace, including simulation models used for thermal and load analysis. 
+| `Onboard Software / launch / cubesat_launch.py `             | All embedded systems code in micropython for running the project. 
+| `Onboard Software / launch / cubesat_launch.py `             | A sample launch file for running all the scripts. 
+| `Onboard Software / output / output.json `                   | Empty file provided for the output to be generated in. 
 
        
 
@@ -58,12 +60,12 @@ The CERN Open Hardware Licence Version 2 - Permissive (CERN-OHL-P) was chosen fo
 - Special thanks to the ELEC5551 course staff and fellow students for their invaluable feedback and support.
 
 ## Contributors
-- Aidan Crummey
 - Jonathon Sader
 - William Hor
 - Sep Kimiaei
 - Carl Alvares
 - Liam Kubach
+- Aidan Crummey
 
 
 
