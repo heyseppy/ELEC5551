@@ -31,7 +31,7 @@ This repository houses all components of the ELEC5551 Electrical Design project 
 ### Onboard Software
 | File Path                         | Description                                                                                       |
 |-----------------------------------|---------------------------------------------------------------------------------------------------|
-| `Onboard Software / launch / cubesat_launch.py `             | All embedded systems code in micropython for running the project. 
+| `Onboard Software / launch / cubesat_program.py `             | All embedded systems code in micropython for running the project. 
 | `Onboard Software / launch / cubesat_launch.py `             | A sample launch file for running all the scripts. 
 | `Onboard Software / output / output.json `                   | Empty file provided for the output to be generated in. 
 
