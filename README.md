@@ -8,6 +8,15 @@
 This repository houses all components of the ELEC5551 Electrical Design project conducted at University of Western Australia. The project includes comprehensive designs and software implementations for a sophisticated electrical system, focusing on both onboard and base station functionalities.
 
 ## Repository Overview
+
+### Onboard Hardware
+| File Path                         | Description                                                                                       |
+|-----------------------------------|---------------------------------------------------------------------------------------------------|
+| `Cubesat_PCB/PCB_Project/Project Outputs for Telemetery System `             | Gerber files containing whole project                     |
+| `Cubesat_PCB/PCB_Project/Components`         | Team 01's custom footprints.|
+| `Cubesat_PCB/PCB_Project/History`           | Altium version history cache.     |
+
+
 ### Base Station Software
 | File Path                         | Description                                                                                       |
 |-----------------------------------|---------------------------------------------------------------------------------------------------|
