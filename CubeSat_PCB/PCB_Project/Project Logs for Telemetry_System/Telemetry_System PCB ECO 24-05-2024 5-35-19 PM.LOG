@@ -1,0 +1,12 @@
+Added Pin To Net: NetName=+3V3 Pin=C6-2
+Added Pin To Net: NetName=+3V3 Pin=C7-2
+Added Pin To Net: NetName=+3V3 Pin=C9-2
+Added Pin To Net: NetName=+3V3 Pin=C10-2
+Added Pin To Net: NetName=+3V3 Pin=U1-1
+Added Pin To Net: NetName=+3V3 Pin=U1-9
+Added Pin To Net: NetName=+3V3 Pin=U1-24
+Added Pin To Net: NetName=+3V3 Pin=U1-36
+Added Pin To Net: NetName=+3V3 Pin=U1-48
+Added Member To Class: ClassName=Telemetry_System Member=Component C9 1 µF
+Added Room: Name=Telemetry_System
+Added Room: Name=U_Peripherals

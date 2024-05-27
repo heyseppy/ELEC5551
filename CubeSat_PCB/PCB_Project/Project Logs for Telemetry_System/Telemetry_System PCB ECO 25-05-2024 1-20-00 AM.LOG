@@ -1,0 +1,24 @@
+Added Component: Designator=U9(DSS0012A)
+Add component (AddParameter): Name = "Alternate_PartNumber"; Value = "TPS62745DSST"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Application_BuildNumber"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CompType"; Value = "IC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr_Name"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MountType"; Value = "SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "DSS0012A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "TPS62745DSSR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "Y"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TYPE"; Value = "TYPE"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VBAT+ Pin=U9-1
+Added Pin To Net: NetName=NetL2_1 Pin=U9-2
+Added Pin To Net: NetName=GND Pin=U9-3
+Added Pin To Net: NetName=GND Pin=U9-4
+Added Pin To Net: NetName=+1V8 Pin=U9-5
+Added Pin To Net: NetName=GND Pin=U9-8
+Added Pin To Net: NetName=GND Pin=U9-9
+Added Pin To Net: NetName=GND Pin=U9-10
+Added Pin To Net: NetName=GND Pin=U9-11
+Added Pin To Net: NetName=+3V3 Pin=U9-12
+Added Pin To Net: NetName=GND Pin=U9-13
+Added Member To Class: ClassName=U_Peripherals Member=Component U9 U_TPS62745DSSR

@@ -1,0 +1,27 @@
+Added Component: Designator=J?(CONN_B4B-PH-SM4-TB_JST)
+Add component (AddParameter): Name = "Mfr_Name"; Value = "JST"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Type"; VariantName = "[No Variations]"
+Added Component: Designator=J?(CONN_B4B-PH-SM4-TB_JST)
+Add component (AddParameter): Name = "Mfr_Name"; Value = "JST"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Type"; VariantName = "[No Variations]"
+Added Component: Designator=J?(CONN_B4B-PH-SM4-TB_JST)
+Add component (AddParameter): Name = "Mfr_Name"; Value = "JST"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Type"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+3V3 Pin=J?-1
+Added Pin To Net: NetName=+3V3 Pin=J?-1
+Added Pin To Net: NetName=+3V3 Pin=J?-1
+Added Pin To Net: NetName=SDA Pin=J?-2
+Added Pin To Net: NetName=SDA Pin=J?-2
+Added Pin To Net: NetName=SDA Pin=J?-2
+Added Pin To Net: NetName=SCL Pin=J?-3
+Added Pin To Net: NetName=SCL Pin=J?-3
+Added Pin To Net: NetName=SCL Pin=J?-3
+Added Pin To Net: NetName=GND Pin=J?-4
+Added Pin To Net: NetName=GND Pin=J?-4
+Added Pin To Net: NetName=GND Pin=J?-4
+Added Member To Class: ClassName=U_Peripherals Member=Component J? J_B4B-PH-SM4-TB
+Added Member To Class: ClassName=U_Peripherals Member=Component J? J_B4B-PH-SM4-TB
+Added Member To Class: ClassName=U_Peripherals Member=Component J? J_B4B-PH-SM4-TB

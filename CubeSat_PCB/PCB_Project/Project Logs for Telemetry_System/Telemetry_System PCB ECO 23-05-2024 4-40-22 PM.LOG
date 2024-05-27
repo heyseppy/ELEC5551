@@ -1,0 +1,31 @@
+Added Component: Designator=U6(DSBGA9-YZF_TEX)
+Add component (AddParameter): Name = "Mfr_Name"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Type"; VariantName = "[No Variations]"
+Add Component: Footprint Not Found PSON65P250X250X100-8N
+Add Pin To Net: Unknown Pin: Pin J2-7
+Add Pin To Net: Unknown Pin: Pin J2-8
+Add Pin To Net: Unknown Pin: Pin J3-7
+Add Pin To Net: Unknown Pin: Pin J3-8
+Add Pin To Net: Unknown Pin: Pin J5-7
+Add Pin To Net: Unknown Pin: Pin J5-8
+Added Pin To Net: NetName=NetR11_1 Pin=U6-A1
+Added Pin To Net: NetName=SDA_1V8 Pin=U6-A2
+Added Pin To Net: NetName=SCL_1V8 Pin=U6-A3
+Added Pin To Net: NetName=NetR?_2 Pin=U6-B1
+Added Pin To Net: NetName=GND Pin=U6-B2
+Added Pin To Net: NetName=NetC23_2 Pin=U6-B3
+Added Pin To Net: NetName=GND Pin=U6-C1
+Added Pin To Net: NetName=VBAT+ Pin=U6-C2
+Added Pin To Net: NetName=PACK+ Pin=U6-C3
+Add Pin To Net: Unknown Pin: Pin U7-1
+Add Pin To Net: Unknown Pin: Pin U7-2
+Add Pin To Net: Unknown Pin: Pin U7-3
+Add Pin To Net: Unknown Pin: Pin U7-4
+Add Pin To Net: Unknown Pin: Pin U7-5
+Add Pin To Net: Unknown Pin: Pin U7-6
+Add Pin To Net: Unknown Pin: Pin U7-7
+Add Pin To Net: Unknown Pin: Pin U7-8
+Added Member To Class: ClassName=U_Peripherals Member=Component U6 U_BQ27427YZFR
+Add Class Member: Failed to add class member : Component U7 U_BME280
+Added Room: Name=Telemetry_System

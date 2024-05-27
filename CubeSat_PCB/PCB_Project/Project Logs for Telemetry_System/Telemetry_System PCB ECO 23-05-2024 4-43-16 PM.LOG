@@ -1,0 +1,18 @@
+Change Component Designator: OldDesignator=R? NewDesignator=R14
+Add Component: Footprint Not Found PSON65P250X250X100-8N
+Add Pin To Net: Unknown Pin: Pin J2-7
+Add Pin To Net: Unknown Pin: Pin J2-8
+Add Pin To Net: Unknown Pin: Pin J3-7
+Add Pin To Net: Unknown Pin: Pin J3-8
+Add Pin To Net: Unknown Pin: Pin J5-7
+Add Pin To Net: Unknown Pin: Pin J5-8
+Add Pin To Net: Unknown Pin: Pin U7-1
+Add Pin To Net: Unknown Pin: Pin U7-2
+Add Pin To Net: Unknown Pin: Pin U7-3
+Add Pin To Net: Unknown Pin: Pin U7-4
+Add Pin To Net: Unknown Pin: Pin U7-5
+Add Pin To Net: Unknown Pin: Pin U7-6
+Add Pin To Net: Unknown Pin: Pin U7-7
+Add Pin To Net: Unknown Pin: Pin U7-8
+Change Net Name : Old Net Name=NetR?_2 New Net Name=NetR14_2
+Add Class Member: Failed to add class member : Component U7 U_BME280

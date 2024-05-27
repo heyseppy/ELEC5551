@@ -1,0 +1,109 @@
+Removed Pin From Net: NetName=3V3 Pin=U1-1
+Removed Pin From Net: NetName=NetC1_2 Pin=U1-3
+Removed Pin From Net: NetName=NetC2_2 Pin=U1-4
+Removed Pin From Net: NetName=NetC3_2 Pin=U1-5
+Removed Pin From Net: NetName=NRST Pin=U1-7
+Removed Pin From Net: NetName=GND Pin=U1-8
+Removed Pin From Net: NetName=3V3 Pin=U1-9
+Removed Pin From Net: NetName=PA0 Pin=U1-10
+Removed Pin From Net: NetName=PA1 Pin=U1-11
+Removed Pin From Net: NetName=PA2 Pin=U1-12
+Removed Pin From Net: NetName=PA3 Pin=U1-13
+Removed Pin From Net: NetName=CS_XBEE Pin=U1-14
+Removed Pin From Net: NetName=SCLK Pin=U1-15
+Removed Pin From Net: NetName=MISO Pin=U1-16
+Removed Pin From Net: NetName=MOSI Pin=U1-17
+Removed Pin From Net: NetName=PB0 Pin=U1-18
+Removed Pin From Net: NetName=PB1 Pin=U1-19
+Removed Pin From Net: NetName=PB2 Pin=U1-20
+Removed Pin From Net: NetName=PB10 Pin=U1-21
+Removed Pin From Net: NetName=NetC4_2 Pin=U1-22
+Removed Pin From Net: NetName=GND Pin=U1-23
+Removed Pin From Net: NetName=3V3 Pin=U1-24
+Removed Pin From Net: NetName=GPS_SAFEBOOT Pin=U1-25
+Removed Pin From Net: NetName=GPS_PPS Pin=U1-26
+Removed Pin From Net: NetName=GPS_INT Pin=U1-27
+Removed Pin From Net: NetName=GPS_RST Pin=U1-28
+Removed Pin From Net: NetName=PA8 Pin=U1-29
+Removed Pin From Net: NetName=PA9 Pin=U1-30
+Removed Pin From Net: NetName=MAG_DRDY Pin=U1-31
+Removed Pin From Net: NetName=A/G_INT1 Pin=U1-32
+Removed Pin From Net: NetName=A/G_INT2 Pin=U1-33
+Removed Pin From Net: NetName=MAG_INT Pin=U1-34
+Removed Pin From Net: NetName=GND Pin=U1-35
+Removed Pin From Net: NetName=3V3 Pin=U1-36
+Removed Pin From Net: NetName=PA14 Pin=U1-37
+Removed Pin From Net: NetName=CS_SDCARD Pin=U1-38
+Removed Pin From Net: NetName=PB3 Pin=U1-39
+Removed Pin From Net: NetName=PB4 Pin=U1-40
+Removed Pin From Net: NetName=PB5 Pin=U1-41
+Removed Pin From Net: NetName=UART_TX Pin=U1-42
+Removed Pin From Net: NetName=UART_RX Pin=U1-43
+Removed Pin From Net: NetName=BOOT0 Pin=U1-44
+Removed Pin From Net: NetName=SCL Pin=U1-45
+Removed Pin From Net: NetName=SDA Pin=U1-46
+Removed Pin From Net: NetName=GND Pin=U1-47
+Removed Pin From Net: NetName=3V3 Pin=U1-48
+Removed Pin From Net: NetName=GND Pin=U1-49
+Removed Member From Class: ClassName=Telemetry_System Member=U1
+Change Component Designator: OldDesignator=J2 NewDesignator=J4
+Change Component Designator: OldDesignator=J3 NewDesignator=J2
+Change Component Designator: OldDesignator=J4 NewDesignator=J3
+Change Component Designator: OldDesignator=Y? NewDesignator=Y1
+Change Component Designator: OldDesignator=Y? NewDesignator=Y2
+Added Component: Designator=U?(UFQFPN-48_7X7X0P55MM)
+Add component (AddParameter): Name = "Mfr_Name"; Value = "STMicroelectronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Type"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=3V3 Pin=U?-1
+Added Pin To Net: NetName=NetC1_2 Pin=U?-3
+Added Pin To Net: NetName=NetC2_2 Pin=U?-4
+Added Pin To Net: NetName=NetC3_2 Pin=U?-5
+Added Pin To Net: NetName=NRST Pin=U?-7
+Added Pin To Net: NetName=GND Pin=U?-8
+Added Pin To Net: NetName=3V3 Pin=U?-9
+Added Pin To Net: NetName=PA0 Pin=U?-10
+Added Pin To Net: NetName=PA1 Pin=U?-11
+Added Pin To Net: NetName=PA2 Pin=U?-12
+Added Pin To Net: NetName=PA3 Pin=U?-13
+Added Pin To Net: NetName=CS_XBEE Pin=U?-14
+Added Pin To Net: NetName=SCLK Pin=U?-15
+Added Pin To Net: NetName=MISO Pin=U?-16
+Added Pin To Net: NetName=MOSI Pin=U?-17
+Added Pin To Net: NetName=PB0 Pin=U?-18
+Added Pin To Net: NetName=PB1 Pin=U?-19
+Added Pin To Net: NetName=PB2 Pin=U?-20
+Added Pin To Net: NetName=PB10 Pin=U?-21
+Added Pin To Net: NetName=NetC4_2 Pin=U?-22
+Added Pin To Net: NetName=GND Pin=U?-23
+Added Pin To Net: NetName=3V3 Pin=U?-24
+Added Pin To Net: NetName=GPS_SAFEBOOT Pin=U?-25
+Added Pin To Net: NetName=GPS_PPS Pin=U?-26
+Added Pin To Net: NetName=GPS_INT Pin=U?-27
+Added Pin To Net: NetName=GPS_RST Pin=U?-28
+Added Pin To Net: NetName=PA8 Pin=U?-29
+Added Pin To Net: NetName=PA9 Pin=U?-30
+Added Pin To Net: NetName=MAG_DRDY Pin=U?-31
+Added Pin To Net: NetName=A/G_INT1 Pin=U?-32
+Added Pin To Net: NetName=A/G_INT2 Pin=U?-33
+Added Pin To Net: NetName=MAG_INT Pin=U?-34
+Added Pin To Net: NetName=GND Pin=U?-35
+Added Pin To Net: NetName=3V3 Pin=U?-36
+Added Pin To Net: NetName=PA14 Pin=U?-37
+Added Pin To Net: NetName=CS_SDCARD Pin=U?-38
+Added Pin To Net: NetName=PB3 Pin=U?-39
+Added Pin To Net: NetName=PB4 Pin=U?-40
+Added Pin To Net: NetName=PB5 Pin=U?-41
+Added Pin To Net: NetName=UART_TX Pin=U?-42
+Added Pin To Net: NetName=UART_RX Pin=U?-43
+Added Pin To Net: NetName=BOOT0 Pin=U?-44
+Added Pin To Net: NetName=SCL Pin=U?-45
+Added Pin To Net: NetName=SDA Pin=U?-46
+Added Pin To Net: NetName=GND Pin=U?-47
+Added Pin To Net: NetName=3V3 Pin=U?-48
+Added Pin To Net: NetName=GND Pin=U?-49
+Added Member To Class: ClassName=U_Peripherals Member=Component C29 47 pF
+Added Member To Class: ClassName=U_Peripherals Member=Component C31 10 µF
+Added Member To Class: ClassName=U_Peripherals Member=Component R13 4.7k
+Added Member To Class: ClassName=Telemetry_System Member=Component U? U_STM32F411CEU6
+Added Member To Class: ClassName=Telemetry_System Member=Component Y2 25 MHz
