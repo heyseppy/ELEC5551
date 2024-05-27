@@ -39,7 +39,7 @@ This repository houses all components of the ELEC5551 Electrical Design project 
 | File Path                         | Description                                                                                       |
 |-----------------------------------|---------------------------------------------------------------------------------------------------|
 | `FSM Generator / fsm_generator.html `             | Generates the finite state machine for operation of the on-board telemetry system. 
-| `FSM Generator / visualiser `             | Constructs a visualiser for the functioning finite state machine.     
+| `FSM Generator / visualiser.html `             | Constructs a visualiser for the functioning finite state machine.     
 
 ## PCB Design
 The `PCB` directory contains all necessary files for the Printed Circuit Board (PCB) design. Schematic files, Gerber files, and comprehensive documentation about layout and components are designed using Altium. This design ensures efficiency and reliability, maintaining stable performance under diverse operational conditions.
